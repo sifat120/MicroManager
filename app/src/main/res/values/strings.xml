@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">micromanager</string>
+    <string name="assignment_name_field">Name</string>
+    <string name="add_assignment">Add Assignments</string>
+    <string name="back_to_home">Back</string>
+    <string name="assginment_list">Your Assignments</string>
+    <string name="assignment_due_date_field">Due Date</string>
+    <string name="assignment_type_field">Type</string>
+    <string name="add_button">Add</string>
+    <string name="view_schedule_button">View Schedule</string>
+    <string name="gen_schedule_button">Generate Schedule</string>
+</resources>
