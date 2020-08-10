@@ -1,2 +1,2 @@
 # MicroManager
- MicroManager app that keeps track of assignments
+ An app that manages your assignments, creates schedules and keeps track of your assingments for you 
