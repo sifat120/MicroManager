@@ -57,4 +57,10 @@ public class Add_Screen extends AppCompatActivity {
         Toast.makeText(this,"Assignment Added", Toast.LENGTH_SHORT).show();
 
     }
+
+
+    public void goToScheduleScreen(View view) {
+        Intent intent = new Intent(this, Schedule.class);
+        startActivity(intent);
+    }
 }
