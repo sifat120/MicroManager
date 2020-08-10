@@ -11,10 +11,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class Add_Screen extends AppCompatActivity {
 
-    //SharedPreferences pref = getSharedPreferences("pref", Context.MODE_PRIVATE);
     SharedPreferences.Editor editor;
     SharedPreferences localPrefs;
     EditText nameField, dueDateField, typeField;
@@ -49,6 +49,12 @@ public class Add_Screen extends AppCompatActivity {
         editor.putString(getString(R.string.typeText), type);
         editor.putString(getString(R.string.dueDateText), due_date);
         editor.apply();
+
+        nameField.getText().clear();
+        typeField.getText().clear();
+        dueDateField.getText().clear();
+
+        Toast.makeText(this,"Assignment Added", Toast.LENGTH_SHORT).show();
 
     }
 }
