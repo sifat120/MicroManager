@@ -36,4 +36,8 @@ public class Assignment {
             priority = 0;
     }
 
+    public String toString(){
+        return name + ", " + due_date + ", "+ type;
+    }
+
 }
