@@ -14,7 +14,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class Add_Screen extends AppCompatActivity {
-
     SharedPreferences.Editor editor;
     SharedPreferences localPrefs;
     EditText nameField, dueDateField, typeField;
