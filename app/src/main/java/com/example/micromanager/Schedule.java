@@ -28,7 +28,11 @@ public class Schedule extends AppCompatActivity {
 
     public void createAssignmentAndAddToList(String name, String type, String dueDate){
         assignments.add(new Assignment(name, type, dueDate));
-        Log.d("Current List: ", assignments.toString());
+        String test = "";
+        for(int i = 0; i < assignments.size();i++){
+            test+=assignments.get(i).toString();
+        }
+        Log.d("Current List: ", test);
     }
     private void scheduleGenerationAlgorithm(List<Assignment> assignmentList){
 
