@@ -32,9 +32,9 @@ public class Schedule extends AppCompatActivity {
         }
 
         for(int i = 0; i < keys.size() - 2; i++) {
-            String name = prefs.getString(keys.get(i), "fhiosfgd");
-            String type = prefs.getString(keys.get(i + 1), "fhiosfgd");
-            String dueDate = prefs.getString(keys.get(i + 2), "fhiosfgd");
+            String name = prefs.getString(keys.get(i), "");
+            String type = prefs.getString(keys.get(i + 1), "");
+            String dueDate = prefs.getString(keys.get(i + 2), "");
             Log.d("FINAL NAME TYPE DUEDATE", name + " " + type + " " + dueDate);
             createAssignmentAndAddToList(name, type, dueDate);
         }
