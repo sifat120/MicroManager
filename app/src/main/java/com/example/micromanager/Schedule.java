@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.util.Log;
 
 import java.util.ArrayList;
@@ -14,25 +15,34 @@ import java.util.List;
 
 public class Schedule extends AppCompatActivity {
     public List<Assignment> assignments = new ArrayList<Assignment>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_schedule);
-        SharedPreferences prefs = getApplicationContext().getSharedPreferences("prefs", Context.MODE_PRIVATE);
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         Intent intent = getIntent();
         int keyNum = intent.getIntExtra("numOfKeys",0);
         Log.d("KEY NUM IS", "" + keyNum);
-        for(int i = 1; i <= keyNum; i++){
-            String name = prefs.getString(getString(R.string.nameText) + i, "");
-            String type = prefs.getString(getString(R.string.typeText) + i,"");
-            String dueDate = prefs.getString(getString(R.string.dueDateText)+ i, "");
-            Log.d("NAME, TYPE, DUE DATE", name +" " + type+ " "+ dueDate);
+        List<String> keys = new ArrayList<String>();
+        for(int i = 1; i <=keyNum; i++){
+            keys.add("Name" + i);
+            keys.add("Type" + i);
+            keys.add("Due Date" + i);
+        }
+
+        for(int i = 0; i < keys.size() - 2; i++) {
+            String name = prefs.getString(keys.get(i), "fhiosfgd");
+            String type = prefs.getString(keys.get(i + 1), "fhiosfgd");
+            String dueDate = prefs.getString(keys.get(i + 2), "fhiosfgd");
+            Log.d("FINAL NAME TYPE DUEDATE", name + " " + type + " " + dueDate);
             createAssignmentAndAddToList(name, type, dueDate);
         }
 
-        String test = "";
-        for(int i = 0; i < assignments.size();i++){
-            test+=assignments.get(i).toString();
+
+         String test = "";
+        for(int j = 0; j < assignments.size();j++){
+            test+=assignments.get(j).toString();
         }
         Log.d("Current List: ", test);
     }
