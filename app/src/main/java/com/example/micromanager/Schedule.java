@@ -26,23 +26,19 @@ public class Schedule extends AppCompatActivity {
         Log.d("KEY NUM IS", "" + keyNum);
         List<String> keys = new ArrayList<String>();
         for(int i = 1; i <=keyNum; i++){
+            String name = prefs.getString("Name" + i, "");
+            String type = prefs.getString("Type" + i, "");
+            String dueDate = prefs.getString(("Due Date" + i), "");
             keys.add("Name" + i);
             keys.add("Type" + i);
             keys.add("Due Date" + i);
-        }
-
-        for(int i = 0; i < keys.size() - 2; i++) {
-            String name = prefs.getString(keys.get(i), "");
-            String type = prefs.getString(keys.get(i + 1), "");
-            String dueDate = prefs.getString(keys.get(i + 2), "");
-            Log.d("FINAL NAME TYPE DUEDATE", name + " " + type + " " + dueDate);
             createAssignmentAndAddToList(name, type, dueDate);
         }
 
 
          String test = "";
         for(int j = 0; j < assignments.size();j++){
-            test+=assignments.get(j).toString();
+            test+=assignments.get(j).toString() +" ";
         }
         Log.d("Current List: ", test);
     }
