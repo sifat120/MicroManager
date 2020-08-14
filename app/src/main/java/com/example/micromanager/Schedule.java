@@ -34,9 +34,7 @@ public class Schedule extends AppCompatActivity {
             keys.add("Due Date" + i);
             createAssignmentAndAddToList(name, type, dueDate);
         }
-
-
-         String test = "";
+        String test = "";
         for(int j = 0; j < assignments.size();j++){
             test+=assignments.get(j).toString() +" ";
         }
@@ -45,11 +43,16 @@ public class Schedule extends AppCompatActivity {
 
     public void createAssignmentAndAddToList(String name, String type, String dueDate){
         assignments.add(new Assignment(name, type, dueDate));
-
     }
 
-    private void scheduleGenerationAlgorithm(List<Assignment> assignmentList){
+    public void scheduleGenerationAlgorithm(List<Assignment> assignments){
+        sortAssignments(assignments);
+    }
 
+    private void sortAssignments(List<Assignment> assignments) {
+        for(int i = 0; i < assignments.size() - 1; i++){
+
+        }
     }
 
 
