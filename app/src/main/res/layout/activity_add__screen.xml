@@ -54,13 +54,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Type_Field"
         app:layout_constraintVertical_bias="0.021"
-        android:onClick="addAssignmentsToGenList"/>
+        android:onClick="addAssignmentToDatabase"/>
 
     <Button
         android:id="@+id/view_schedule"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/view_schedule_button"
+        android:onClick="goToAssignmentListScreen"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -76,7 +77,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Add_Button"
-        android:onClick="goToScheduleScreen"/>
+        android:onClick="goToAssignmentListScreen"/>
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/registrationToolbar"

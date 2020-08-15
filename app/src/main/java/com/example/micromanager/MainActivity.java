@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+
     public void addAssignments(View view) {
         Intent intent = new Intent(this,Add_Screen.class);
         startActivity(intent);

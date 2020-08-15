@@ -34,11 +34,11 @@ public class Schedule extends AppCompatActivity {
             keys.add("Due Date" + i);
             createAssignmentAndAddToList(name, type, dueDate);
         }
-        String test = "";
-        for(int j = 0; j < assignments.size();j++){
-            test+=assignments.get(j).toString() +" ";
-        }
-        Log.d("Current List: ", test);
+//        String test = "";
+//        for(int j = 0; j < assignments.size();j++){
+//            test+=assignments.get(j).toString() +" ";
+//        }
+//        Log.d("Current List: ", test);
     }
 
     public void createAssignmentAndAddToList(String name, String type, String dueDate){
