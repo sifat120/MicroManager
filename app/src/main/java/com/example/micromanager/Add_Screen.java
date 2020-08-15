@@ -3,6 +3,8 @@ package com.example.micromanager;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.room.Room;
 
 import android.content.Context;
 import android.content.Intent;
@@ -16,9 +18,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class Add_Screen extends AppCompatActivity {
-    public int keyNum = 0;
-    SharedPreferences.Editor editor;
-    SharedPreferences localPrefs;
     EditText nameField, dueDateField, typeField;
     Button addButton;
     String name, type, due_date;
@@ -33,7 +32,6 @@ public class Add_Screen extends AppCompatActivity {
         typeField = (EditText) findViewById(R.id.Type_Field);
         addButton = (Button) findViewById(R.id.add_button);
 
-        localPrefs = PreferenceManager.getDefaultSharedPreferences(this);
 
         Toolbar registrationToolbar = findViewById(R.id.registrationToolbar);
         setSupportActionBar(registrationToolbar);
@@ -41,34 +39,32 @@ public class Add_Screen extends AppCompatActivity {
         ab.setDisplayHomeAsUpEnabled(true);
     }
 
-    public void addAssignmentsToGenList(View view) {
+    public void addAssignmentToDatabase(View view) {
         name = nameField.getText().toString();
         type = typeField.getText().toString();
         due_date = dueDateField.getText().toString();
 
-        editor = localPrefs.edit();
-        ++keyNum;
-        String nameKey = getString(R.string.nameText) + keyNum;
-        String typeKey = getString(R.string.typeText) + keyNum;
-        String dueDateKey = getString(R.string.dueDateText) + keyNum;
-        editor.putString(nameKey, name);
-        editor.putString(typeKey, type);
-        editor.putString(dueDateKey, due_date);
-        Log.d("NAME TYPE DUE DATE", nameKey + " " + typeKey + " "+ dueDateKey);
-        editor.apply();
+        AssignmentViewModel aViewModel = new ViewModelProvider(this).get(AssignmentViewModel.class);
+
+        //making the entry
+        AssignmentTable assignmentTable = new AssignmentTable();
+        assignmentTable.name = name;
+        assignmentTable.dueDate = due_date;
+        assignmentTable.type = type;
 
         nameField.getText().clear();
         typeField.getText().clear();
         dueDateField.getText().clear();
+
+        aViewModel.insertNewItem(assignmentTable); //ADD TO THE DATABASE
 
         Toast.makeText(this,"Assignment Added", Toast.LENGTH_SHORT).show();
 
     }
 
 
-    public void goToScheduleScreen(View view) {
-        Intent intent = new Intent(this, Schedule.class);
-        intent.putExtra("numOfKeys", keyNum);
+    public void goToAssignmentListScreen(View view) {
+        Intent intent = new Intent(this, Assignment_List.class);
         startActivity(intent);
     }
 }
