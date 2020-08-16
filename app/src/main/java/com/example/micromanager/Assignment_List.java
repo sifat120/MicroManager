@@ -3,7 +3,6 @@ package com.example.micromanager;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -44,6 +43,16 @@ public class Assignment_List extends AppCompatActivity {
                 itemAdapter.notifyDataSetChanged();
             }
         });
+    }
+
+    public void addAssignments(View view) {
+        Intent intent = new Intent(this,Add_Screen.class);
+        startActivity(intent);
+    }
+
+    public void backToMain(View view){
+        Intent intent = new Intent(this,MainActivity.class);
+        startActivity(intent);
     }
 
 }

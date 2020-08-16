@@ -28,17 +28,18 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_row,parent,false);
-        ViewHolder viewHolder = new ViewHolder(view);
 
-        return viewHolder;
+        return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         AssignmentTable assignmentTable = assignmentList.get(position);
+        String due = "Due: "+assignmentTable.dueDate;
+        String type = "Type: "+assignmentTable.type;
         holder.txtItemName.setText(assignmentTable.name);
-        holder.txtItemDate.setText(assignmentTable.dueDate);
-        holder.txtItemType.setText(assignmentTable.type);
+        holder.txtItemDate.setText(due);
+        holder.txtItemType.setText(type);
     }
 
     @Override
