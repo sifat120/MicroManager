@@ -11,9 +11,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 public class Assignment_List extends AppCompatActivity {
 
@@ -27,6 +34,9 @@ public class Assignment_List extends AppCompatActivity {
 
         AssignmentViewModel aViewModel = new ViewModelProvider(this).get(AssignmentViewModel.class);
 
+        String myFormat = "MM/dd/yy";
+        SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
+
         List<AssignmentTable> assignmentTable = new ArrayList<>();
         ItemAdapter itemAdapter = new ItemAdapter(assignmentTable);
         recyclerView.setAdapter(itemAdapter);
@@ -36,13 +46,24 @@ public class Assignment_List extends AppCompatActivity {
                 DividerItemDecoration(this,DividerItemDecoration.VERTICAL);
         recyclerView.addItemDecoration(itemDecoration);
 
-        aViewModel.getItems().observe(this,new Observer<List<AssignmentTable>>(){
-            @Override
-            public void onChanged(List<AssignmentTable> assignmentTables) {
-                itemAdapter.setData(assignmentTables);
-                itemAdapter.notifyDataSetChanged();
-            }
+        aViewModel.getItems().observe(this, assignmentTables -> {
+            Collections.sort(assignmentTables, (assignmentTable1, assignmentTable2) -> {
+                Date date1 = null;
+                Date date2 = null;
+                try {
+                    date1 = sdf.parse(assignmentTable1.dueDate);
+                    date2 = sdf.parse(assignmentTable2.dueDate);
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+                return date1.after(date2) ? 1 : (date1.before(date2)) ? -1 : 0;
+            });
+            itemAdapter.setData(assignmentTables);
+            itemAdapter.notifyDataSetChanged();
         });
+
+
+
     }
 
     public void addAssignments(View view) {

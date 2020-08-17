@@ -18,4 +18,5 @@ public class AssignmentTable {
 
     @ColumnInfo(name="assignment_type")
     public String type;
+
 }

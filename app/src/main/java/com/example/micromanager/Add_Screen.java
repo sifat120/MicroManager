@@ -19,8 +19,10 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.Locale;
 
 public class Add_Screen extends AppCompatActivity {
@@ -65,10 +67,11 @@ public class Add_Screen extends AppCompatActivity {
     }
 
     private void updateLabel(EditText edittext, Calendar myCalendar) {
-        String myFormat = "MM/dd/yy"; //In which you need put here
+        String myFormat = "MM/dd/yy";
         SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
 
         edittext.setText(sdf.format(myCalendar.getTime()));
+
     }
 
     public void addAssignmentToDatabase(View view) {
@@ -99,4 +102,5 @@ public class Add_Screen extends AppCompatActivity {
         Intent intent = new Intent(this, Assignment_List.class);
         startActivity(intent);
     }
+
 }
