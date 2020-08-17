@@ -28,7 +28,7 @@ public class Assignment_List extends AppCompatActivity {
         AssignmentViewModel aViewModel = new ViewModelProvider(this).get(AssignmentViewModel.class);
 
         List<AssignmentTable> assignmentTable = new ArrayList<>();
-        ItemAdapter itemAdapter = new ItemAdapter(assignmentTable);
+        final ItemAdapter itemAdapter = new ItemAdapter(assignmentTable);
         recyclerView.setAdapter(itemAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 

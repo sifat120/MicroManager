@@ -50,7 +50,7 @@ public class Schedule extends AppCompatActivity {
     }
 
     private void sortAssignments(List<Assignment> assignments) {
-        for(int i = 0; i < assignments.size() - 1; i++){
+        for(int i = 0; i < assignments.size(); i++){
 
         }
     }
