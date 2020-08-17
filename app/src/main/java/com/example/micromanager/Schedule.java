@@ -1,6 +1,8 @@
 package com.example.micromanager;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
 
 import android.content.Context;
 import android.content.Intent;
@@ -9,9 +11,13 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.Log;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Locale;
 
 public class Schedule extends AppCompatActivity {
     public List<Assignment> assignments = new ArrayList<Assignment>();
@@ -20,32 +26,12 @@ public class Schedule extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_schedule);
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        Intent intent = getIntent();
-        int keyNum = intent.getIntExtra("numOfKeys",0);
-        Log.d("KEY NUM IS", "" + keyNum);
-        List<String> keys = new ArrayList<String>();
-        for(int i = 1; i <=keyNum; i++){
-            String name = prefs.getString("Name" + i, "");
-            String type = prefs.getString("Type" + i, "");
-            String dueDate = prefs.getString(("Due Date" + i), "");
-            keys.add("Name" + i);
-            keys.add("Type" + i);
-            keys.add("Due Date" + i);
-            createAssignmentAndAddToList(name, type, dueDate);
-        }
-//        String test = "";
-//        for(int j = 0; j < assignments.size();j++){
-//            test+=assignments.get(j).toString() +" ";
-//        }
-//        Log.d("Current List: ", test);
+
     }
 
-    public void createAssignmentAndAddToList(String name, String type, String dueDate){
-        assignments.add(new Assignment(name, type, dueDate));
-    }
 
-    public void scheduleGenerationAlgorithm(List<Assignment> assignments){
+    public void scheduleGenerationAlgorithm(){
+
         sortAssignments(assignments);
     }
 

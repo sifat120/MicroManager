@@ -28,6 +28,7 @@ public class AssignmentViewModel extends AndroidViewModel {
         return items;
     }
 
+
     public void deleteItem(AssignmentTable assignmentTable){
         itemRepository.deleteItem(assignmentTable);
     }

@@ -16,6 +16,7 @@ public interface AssignmentDao {
     @Query("SELECT * FROM assignment")
     LiveData<List<AssignmentTable>> getAllItems();
 
+
     @Delete
     void deleteItem(AssignmentTable assignmentTable);
 }
