@@ -4,6 +4,7 @@ package com.example.micromanager;
 
         import android.content.Intent;
         import android.os.Bundle;
+        import android.util.Log;
         import android.view.View;
         import android.widget.ImageView;
 
@@ -16,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
         ImageView logo = (ImageView) findViewById(R.id.logo);
         int logoRes = logo.getResources().getIdentifier("@drawable/logo", null,this.getPackageName());
         logo.setImageResource(logoRes);
+
     }
 
 

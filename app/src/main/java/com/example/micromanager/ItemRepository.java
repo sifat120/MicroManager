@@ -22,6 +22,13 @@ public class ItemRepository {
         return AssignmentDatabase.getInstance(context).assignmentDao().getAllItems();
     }
 
+    public LiveData<Boolean> getPriority(){
+        return AssignmentDatabase.getInstance(context).assignmentDao().getPriority();
+    }
+
+    public void updateItem(final AssignmentTable assignmentTable){
+        AsyncTask.execute(() -> AssignmentDatabase.getInstance(context).assignmentDao().update(assignmentTable));
+    }
 
     public void deleteItem(final AssignmentTable assignmentTable){
         AsyncTask.execute(() -> AssignmentDatabase.getInstance(context).assignmentDao().deleteItem(assignmentTable));
