@@ -28,6 +28,13 @@ public class AssignmentViewModel extends AndroidViewModel {
         return items;
     }
 
+    public void updateAssignment(AssignmentTable assignmentTable){
+        itemRepository.updateItem(assignmentTable);
+    }
+
+    public LiveData<Boolean> getPriority(){
+        return itemRepository.getPriority();
+    }
 
     public void deleteItem(AssignmentTable assignmentTable){
         itemRepository.deleteItem(assignmentTable);

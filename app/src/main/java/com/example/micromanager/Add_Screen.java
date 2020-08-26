@@ -87,6 +87,10 @@ public class Add_Screen extends AppCompatActivity {
         assignmentTable.dueDate = due_date;
         assignmentTable.type = type;
 
+        //setting priority to not high and iscompleted to false
+        assignmentTable.isCompleted = false;
+        assignmentTable.isHighPriority = false;
+
         nameField.getText().clear();
         typeField.getText().clear();
         dueDateField.getText().clear();

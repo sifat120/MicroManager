@@ -9,7 +9,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Layout;
 import android.view.View;
+import android.widget.ImageView;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -31,6 +33,7 @@ public class Assignment_List extends AppCompatActivity {
         setContentView(R.layout.activity_assignment__list);
 
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
+
 
         AssignmentViewModel aViewModel = new ViewModelProvider(this).get(AssignmentViewModel.class);
 
@@ -56,6 +59,7 @@ public class Assignment_List extends AppCompatActivity {
                 } catch (ParseException e) {
                     e.printStackTrace();
                 }
+                assert date1 != null;
                 return date1.after(date2) ? 1 : (date1.before(date2)) ? -1 : 0;
             });
             itemAdapter.setData(assignmentTables);

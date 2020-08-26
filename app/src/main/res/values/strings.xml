@@ -3,6 +3,7 @@
     <string name="assignment_name_field">Name</string>
     <string name="add_assignment">Add Assignments</string>
     <string name="back_to_home">Back</string>
+    <string name="optionsMenu">&#8942;</string>
     <string name="assginment_list">Your Assignments</string>
     <string name="assignment_due_date_field">Due Date</string>
     <string name="assignment_type_field">Type</string>
