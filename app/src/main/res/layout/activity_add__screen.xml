@@ -48,30 +48,38 @@
 
     <Button
         android:id="@+id/Add_Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:background="@drawable/custom_button"
+        android:fontFamily="sans-serif-black"
         android:onClick="addAssignmentToDatabase"
         android:text="@string/add_button"
+        android:textColor="#ffcc99"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Type_Field"
-        app:layout_constraintVertical_bias="0.202" />
+        app:layout_constraintVertical_bias="0.2" />
 
     <Button
         android:id="@+id/view_schedule"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
         android:layout_marginBottom="100dp"
+        android:background="@drawable/custom_button_2"
+        android:fontFamily="sans-serif-black"
         android:onClick="goToAssignmentListScreen"
         android:text="@string/view_schedule_button"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Add_Button"
-        app:layout_constraintVertical_bias="0.849" />
+        app:layout_constraintVertical_bias="0.759" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/registrationToolbar"

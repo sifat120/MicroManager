@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import android.content.ClipData;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -20,26 +21,14 @@ import java.util.List;
 import java.util.Locale;
 
 public class Schedule extends AppCompatActivity {
-    public List<Assignment> assignments = new ArrayList<Assignment>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_schedule);
-
     }
 
 
-    public void scheduleGenerationAlgorithm(){
-
-        sortAssignments(assignments);
-    }
-
-    private void sortAssignments(List<Assignment> assignments) {
-        for(int i = 0; i < assignments.size(); i++){
-
-        }
-    }
 
 
 }
