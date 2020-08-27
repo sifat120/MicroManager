@@ -3,11 +3,11 @@
 
     <item
         android:id="@+id/priority"
-        android:title="Set Priority" />
+        android:title="@string/setPriority" />
 
     <item
         android:id="@+id/markAsDone"
-        android:title="Mark As Done" />
+        android:title="@string/markAsDone" />
 
 
 </menu>

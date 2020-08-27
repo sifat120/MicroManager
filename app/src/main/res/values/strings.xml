@@ -2,7 +2,7 @@
     <string name="app_name">micromanager</string>
     <string name="assignment_name_field">Name</string>
     <string name="add_assignment">Add Assignments</string>
-    <string name="back_to_home">Back</string>
+    <string name="back_to_home">Home</string>
     <string name="optionsMenu">&#8942;</string>
     <string name="assignment_due_date_field">Due Date</string>
     <string name="assignment_type_field">Type</string>
@@ -12,4 +12,9 @@
     <string name="typeText">Type</string>
     <string name="dueDateText">Due Date</string>
     <string name="Or_Bar">------------or------------</string>
+    <string name="markAsDone">Mark As Done</string>
+    <string name="setPriority">Set Priority</string>
+    <string name="sampleType">Sample Type</string>
+    <string name="sampleName">Sample Item</string>
+    <string name="sampleDueDate">Sample Date</string>
 </resources>

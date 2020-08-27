@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Layout;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -58,6 +59,7 @@ public class Assignment_List extends AppCompatActivity {
                     date2 = sdf.parse(assignmentTable2.dueDate);
                 } catch (ParseException e) {
                     e.printStackTrace();
+                    Log.d("REACHED","CATCH STATEMENT");
                 }
                 assert date1 != null;
                 return date1.after(date2) ? 1 : (date1.before(date2)) ? -1 : 0;

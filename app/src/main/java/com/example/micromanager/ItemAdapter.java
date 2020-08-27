@@ -41,7 +41,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         AssignmentTable assignmentTable = assignmentList.get(position);
         String due = "Due: "+assignmentTable.dueDate;
-        String type = "Type: "+assignmentTable.type;
+        String type = assignmentTable.type;
         holder.txtItemName.setText(assignmentTable.name);
         holder.txtItemDate.setText(due);
         holder.txtItemType.setText(type);

@@ -85,14 +85,16 @@
         android:id="@+id/registrationToolbar"
         android:layout_width="409dp"
         android:layout_height="wrap_content"
-        android:background="@color/blueofficial"
+        android:background="#fffff0"
         android:minHeight="?attr/actionBarSize"
-        app:titleTextColor="@color/white"
+        app:titleTextColor="#ffcc99"
         app:subtitleTextColor="@color/white"
         android:theme="@style/AppTheme"
+        app:title="Home"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
