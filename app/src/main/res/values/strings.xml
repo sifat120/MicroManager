@@ -13,4 +13,5 @@
     <string name="nameText">Name</string>
     <string name="typeText">Type</string>
     <string name="dueDateText">Due Date</string>
+    <string name="logoLabel">App logo</string>
 </resources>

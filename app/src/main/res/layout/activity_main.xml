@@ -10,19 +10,20 @@
 
     <Button
         android:id="@+id/add_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:background="@drawable/custom_button"
+        android:fontFamily="sans-serif-black"
         android:onClick="addAssignments"
         android:text="@string/add_assignment"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.759"
-        android:textAllCaps="false"
-        android:textColor="#FFFFFF"
-        android:textSize="14sp"
-        android:background="@drawable/custom_button"/>
+        app:layout_constraintVertical_bias="0.746" />
 
     <ImageView
         android:id="@+id/logo"
@@ -34,22 +35,26 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.105"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@drawable/logo"
+        android:contentDescription="@string/logoLabel" />
 
     <Button
         android:id="@+id/Assignment_list_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/custom_button"
+        android:fontFamily="sans-serif-black"
         android:onClick="goToAssignmentListScreen"
-        android:text="@string/assginment_list"
+        android:text="@string/view_schedule_button"
         android:textAllCaps="false"
-        android:textColor="#FFFFFF"
-        android:textSize="14sp"
+        android:textSize="16sp"
+        android:textColor="#000000"
         app:layout_constraintBottom_toTopOf="@+id/add_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logo"
-        app:layout_constraintVertical_bias="0.947" />
+        app:layout_constraintVertical_bias="0.742" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
