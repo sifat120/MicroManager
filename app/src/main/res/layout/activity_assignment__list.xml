@@ -9,57 +9,27 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="600dp"
+        android:layout_width="410dp"
+        android:layout_height="516dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.503" />
+        app:layout_constraintVertical_bias="0.437" />
 
-    <TextView
-        android:id="@+id/assignmentScreenTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-black"
-        android:text="Your Assignments"
-        android:textColor="#ffcc99"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/recyclerView"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/backtohomeBar"
+        android:layout_width="411dp"
+        android:layout_height="53dp"
+        android:background="#fffff0"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/AppTheme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.684" />
-
-    <Button
-        android:id="@+id/add_btn"
-        android:layout_width="180dp"
-        android:layout_height="50dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/custom_button"
-        android:fontFamily="sans-serif-black"
-        android:onClick="addAssignments"
-        android:text="@string/add_assignment"
-        android:textColor="#ffcc99"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <Button
-        android:id="@+id/back"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/custom_button_2"
-        android:fontFamily="sans-serif-black"
-        android:onClick="backToMain"
-        android:text="@string/back_to_home"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:subtitleTextColor="@color/white"
+        app:title="Your Assignments"
+        app:titleTextColor="#ffcc99" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

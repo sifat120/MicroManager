@@ -4,26 +4,17 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.room.Room;
 
 import android.app.DatePickerDialog;
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import java.nio.channels.InterruptedByTimeoutException;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.Locale;
 
 public class Add_Screen extends AppCompatActivity {
@@ -41,7 +32,6 @@ public class Add_Screen extends AppCompatActivity {
         typeField = (EditText) findViewById(R.id.Type_Field);
         addButton = (Button) findViewById(R.id.add_button);
 
-
         Calendar myCalendar = Calendar.getInstance();
 
         DatePickerDialog.OnDateSetListener date = (view, year, monthOfYear, dayOfMonth) -> {
@@ -57,10 +47,7 @@ public class Add_Screen extends AppCompatActivity {
                     myCalendar.get(Calendar.DAY_OF_MONTH)).show();
         });
 
-
-
-
-        Toolbar registrationToolbar = findViewById(R.id.registrationToolbar);
+        Toolbar registrationToolbar = findViewById(R.id.backtohomeBar);
         setSupportActionBar(registrationToolbar);
         ActionBar ab = getSupportActionBar();
         assert ab != null;
@@ -79,7 +66,6 @@ public class Add_Screen extends AppCompatActivity {
         name = nameField.getText().toString();
         type = typeField.getText().toString();
         due_date = dueDateField.getText().toString();
-
         AssignmentViewModel aViewModel = new ViewModelProvider(this).get(AssignmentViewModel.class);
 
         //making the entry
@@ -88,7 +74,7 @@ public class Add_Screen extends AppCompatActivity {
         assignmentTable.dueDate = due_date;
         assignmentTable.type = type;
 
-        //setting priority to not high and iscompleted to false
+        //setting priority to not high and is completed to false
         assignmentTable.isCompleted = false;
         assignmentTable.isHighPriority = false;
 

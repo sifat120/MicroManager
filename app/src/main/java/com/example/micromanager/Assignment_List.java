@@ -1,6 +1,8 @@
 package com.example.micromanager;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.DividerItemDecoration;
@@ -67,7 +69,11 @@ public class Assignment_List extends AppCompatActivity {
             itemAdapter.setData(assignmentTables);
             itemAdapter.notifyDataSetChanged();
         });
-
+        Toolbar registrationToolbar = findViewById(R.id.backtohomeBar);
+        setSupportActionBar(registrationToolbar);
+        ActionBar ab = getSupportActionBar();
+        assert ab != null;
+        ab.setDisplayHomeAsUpEnabled(true);
 
 
     }
@@ -77,9 +83,5 @@ public class Assignment_List extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void backToMain(View view){
-        Intent intent = new Intent(this,MainActivity.class);
-        startActivity(intent);
-    }
 
 }
