@@ -22,7 +22,7 @@
         android:id="@+id/backtohomeBar"
         android:layout_width="411dp"
         android:layout_height="53dp"
-        android:background="#fffff0"
+        android:background="#00323213"
         android:minHeight="?attr/actionBarSize"
         android:theme="@style/AppTheme"
         app:layout_constraintEnd_toEndOf="parent"
@@ -30,6 +30,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:subtitleTextColor="@color/white"
         app:title="Your Assignments"
-        app:titleTextColor="#ffcc99" />
+        app:titleTextColor="@color/white" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

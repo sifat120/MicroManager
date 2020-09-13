@@ -8,6 +8,7 @@ import androidx.lifecycle.ViewModelProvider;
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -62,10 +63,19 @@ public class Add_Screen extends AppCompatActivity {
 
     }
 
-    public void addAssignmentToDatabase(View view) {
+    public void checkTextFields(View view){
         name = nameField.getText().toString();
         type = typeField.getText().toString();
         due_date = dueDateField.getText().toString();
+        Log.d("FIELDS", name + " " + type + " " + due_date);
+        while((name == null || type == null || due_date == null) || (name == "" || type == "" || due_date == "")){
+            addButton.setClickable(false);
+            Toast.makeText(this, "Missing Field", Toast.LENGTH_SHORT).show();
+        }
+        addAssignmentToDatabase(view, name, type, due_date);
+    }
+
+    public void addAssignmentToDatabase(View view, String name, String type, String due_date){
         AssignmentViewModel aViewModel = new ViewModelProvider(this).get(AssignmentViewModel.class);
 
         //making the entry

@@ -7,7 +7,7 @@
     <string name="assignment_due_date_field">Due Date</string>
     <string name="assignment_type_field">Type</string>
     <string name="add_button">Add</string>
-    <string name="view_schedule_button">View Schedule</string>
+    <string name="view_schedule_button">Schedule</string>
     <string name="nameText">Name</string>
     <string name="typeText">Type</string>
     <string name="dueDateText">Due Date</string>
