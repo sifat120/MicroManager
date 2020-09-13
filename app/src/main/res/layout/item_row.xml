@@ -12,7 +12,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
         android:text="@string/sampleName"
-        android:textColor="@color/listTitleColor"
+        android:textColor="@color/mainTextColor"
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"

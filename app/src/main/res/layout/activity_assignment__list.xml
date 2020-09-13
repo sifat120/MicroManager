@@ -28,8 +28,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:subtitleTextColor="@color/white"
+        app:subtitleTextColor="@color/mainTextColor"
         app:title="Your Assignments"
-        app:titleTextColor="@color/white" />
+        app:titleTextColor="@color/mainTextColor" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

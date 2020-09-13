@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="type_list">
+        <item>Homework</item>
+        <item>Test</item>
+        <item>Midterm/Final</item>
+        <item>Extra Credit</item>
+        <item>Project</item>
+    </string-array>
+</resources>

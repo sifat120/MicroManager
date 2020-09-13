@@ -10,16 +10,20 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
 
-public class Add_Screen extends AppCompatActivity {
-    EditText nameField, dueDateField, typeField;
+public class Add_Screen extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+    EditText nameField, dueDateField;
+    Spinner typeField;
     Button addButton;
     String name, type, due_date;
 
@@ -30,7 +34,7 @@ public class Add_Screen extends AppCompatActivity {
 
         nameField = (EditText) findViewById(R.id.Name_Field);
         dueDateField = (EditText) findViewById(R.id.Due_Date_Field);
-        typeField = (EditText) findViewById(R.id.Type_Field);
+        typeField =  (Spinner) findViewById(R.id.Type_Field);
         addButton = (Button) findViewById(R.id.add_button);
 
         Calendar myCalendar = Calendar.getInstance();
@@ -53,6 +57,12 @@ public class Add_Screen extends AppCompatActivity {
         ActionBar ab = getSupportActionBar();
         assert ab != null;
         ab.setDisplayHomeAsUpEnabled(true);
+
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.type_list, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        typeField.setAdapter(adapter);
+        typeField.setOnItemSelectedListener(this);
+
     }
 
     private void updateLabel(EditText edittext, Calendar myCalendar) {
@@ -65,7 +75,6 @@ public class Add_Screen extends AppCompatActivity {
 
     public void checkTextFields(View view){
         name = nameField.getText().toString();
-        type = typeField.getText().toString();
         due_date = dueDateField.getText().toString();
         Log.d("FIELDS", name + " " + type + " " + due_date);
         while((name == null || type == null || due_date == null) || (name == "" || type == "" || due_date == "")){
@@ -89,7 +98,6 @@ public class Add_Screen extends AppCompatActivity {
         assignmentTable.isHighPriority = false;
 
         nameField.getText().clear();
-        typeField.getText().clear();
         dueDateField.getText().clear();
 
         aViewModel.insertNewItem(assignmentTable); //ADD TO THE DATABASE
@@ -104,4 +112,14 @@ public class Add_Screen extends AppCompatActivity {
         startActivity(intent);
     }
 
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        String typeFromSpinner = parent.getItemAtPosition(position).toString();
+        type = typeFromSpinner;
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+        
+    }
 }
