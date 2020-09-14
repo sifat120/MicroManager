@@ -8,6 +8,7 @@
     <string name="assignment_type_field">Type</string>
     <string name="add_button">Add</string>
     <string name="view_schedule_button">Schedule</string>
+    <string name="home_view_schedule_button">View Schedule</string>
     <string name="nameText">Name</string>
     <string name="typeText">Type</string>
     <string name="dueDateText">Due Date</string>
@@ -17,4 +18,5 @@
     <string name="sampleType">Sample Type</string>
     <string name="sampleName">Sample Item</string>
     <string name="sampleDueDate">Sample Date</string>
+    <string name="mainLogoOnTitleScreen">Main Logo on the title screen</string>
 </resources>

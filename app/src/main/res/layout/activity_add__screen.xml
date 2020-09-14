@@ -33,7 +33,8 @@
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.809" />
+        app:layout_constraintVertical_bias="0.809"
+        />
 
     <Button
         android:id="@+id/Add_Button"
@@ -64,24 +65,6 @@
         app:layout_constraintTop_toBottomOf="@+id/Due_Date_Field"
         app:layout_constraintVertical_bias="0.424" />
 
-    <Button
-        android:id="@+id/view_schedule"
-        android:layout_width="120dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="100dp"
-        android:background="@drawable/custom_button_2"
-        android:fontFamily="sans-serif-black"
-        android:onClick="goToAssignmentListScreen"
-        android:text="@string/view_schedule_button"
-        android:textColor="@color/mainTextColor"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Add_Button"
-        app:layout_constraintVertical_bias="1.0" />
-
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/backtohomeBar"
         android:layout_width="409dp"
@@ -109,6 +92,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/backtohomeBar"
         app:layout_constraintVertical_bias="0.379" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="134dp"
+        android:layout_height="130dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Add_Button"
+        app:srcCompat="@drawable/calender"
+        android:onClick="goToAssignmentListScreen"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
