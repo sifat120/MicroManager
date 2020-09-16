@@ -14,6 +14,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -35,7 +36,7 @@ public class Add_Screen extends AppCompatActivity implements AdapterView.OnItemS
         nameField = (EditText) findViewById(R.id.Name_Field);
         dueDateField = (EditText) findViewById(R.id.Due_Date_Field);
         typeField =  (Spinner) findViewById(R.id.Type_Field);
-        addButton = (Button) findViewById(R.id.add_button);
+        addButton = (Button) findViewById(R.id.Add_Button);
 
         Calendar myCalendar = Calendar.getInstance();
 
@@ -77,14 +78,14 @@ public class Add_Screen extends AppCompatActivity implements AdapterView.OnItemS
         name = nameField.getText().toString();
         due_date = dueDateField.getText().toString();
         Log.d("FIELDS", name + " " + type + " " + due_date);
-        while((name == null || type == null || due_date == null) || (name == "" || type == "" || due_date == "")){
-            addButton.setClickable(false);
+        if(due_date == null || due_date.equals("")) {
             Toast.makeText(this, "Missing Field", Toast.LENGTH_SHORT).show();
+        }else{
+            addAssignmentToDatabase(name, type, due_date);
         }
-        addAssignmentToDatabase(view, name, type, due_date);
     }
 
-    public void addAssignmentToDatabase(View view, String name, String type, String due_date){
+    public void addAssignmentToDatabase(String name, String type, String due_date){
         AssignmentViewModel aViewModel = new ViewModelProvider(this).get(AssignmentViewModel.class);
 
         //making the entry

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_background"
+    android:background="@color/darkBlueBackground"
     tools:context=".Assignment_List">
 
     <androidx.recyclerview.widget.RecyclerView
@@ -33,15 +33,29 @@
         app:titleTextColor="@color/mainTextColor" />
 
     <ImageView
-        android:id="@+id/addButton"
+        android:id="@+id/add_button"
         android:layout_width="165dp"
         android:layout_height="118dp"
+        android:onClick="addAssignments"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/backtohomeBar"
-        app:layout_constraintVertical_bias="0.92"
-        app:srcCompat="@drawable/addbutton"
-        android:onClick="addAssignments"/>
+        app:layout_constraintVertical_bias="0.916"
+        app:srcCompat="@drawable/addbutton" />
+
+    <ImageView
+        android:id="@+id/helpButton"
+        android:layout_width="198dp"
+        android:layout_height="110dp"
+        android:contentDescription="@string/helpButtonDesc"
+        android:onClick="goToHelpScreen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/add_button"
+        app:layout_constraintHorizontal_bias="0.266"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backtohomeBar"
+        app:layout_constraintVertical_bias="0.917"
+        app:srcCompat="@drawable/helpbutton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -31,4 +31,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent  = new Intent(this, Assignment_List.class);
         startActivity(intent);
     }
+
+    public void goToHelpScreen(View view) {
+        Intent intent = new Intent(this, Help_Page.class);
+        startActivity(intent);
+    }
 }

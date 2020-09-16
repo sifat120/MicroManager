@@ -19,4 +19,10 @@
     <string name="sampleName">Sample Item</string>
     <string name="sampleDueDate">Sample Date</string>
     <string name="mainLogoOnTitleScreen">Main Logo on the title screen</string>
+    <string name="howToUseTitle">How To Use</string>
+    <string name="howToUseDirections">Our app is very simple to use!  \n\nTo start click Add Assignments, which brings you to a screen in which you wil be prompted to
+    enter the Name, Due Date (From a Calender), and type of assignment. Once you\'re done entering this information simply press add and your assignment has been added to the list! \n\nTo see the
+    list you can press the arrow on the top left to go to the home screen or you can press the calender logo to go to the schedule screen. In the schedule screen you can delete assignments, mark them as done, or
+    go back to adding assignments with the + button. To see a more visual tutorial of our app visit our youtube video: </string>
+    <string name="helpButtonDesc">Help Button</string>
 </resources>

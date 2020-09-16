@@ -84,4 +84,8 @@ public class Assignment_List extends AppCompatActivity {
     }
 
 
+    public void goToHelpScreen(View view) {
+        Intent intent = new Intent(this, Help_Page.class);
+        startActivity(intent);
+    }
 }
