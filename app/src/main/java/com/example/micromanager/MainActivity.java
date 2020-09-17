@@ -36,4 +36,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, Help_Page.class);
         startActivity(intent);
     }
+    public void goToAboutPage(View view){
+        Intent intent = new Intent(this, About_Page.class);
+        startActivity(intent);
+    }
+
 }

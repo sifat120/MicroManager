@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".About_Page"></activity>
         <activity
             android:name=".Assignment_List"
             android:parentActivityName=".MainActivity">
@@ -16,14 +17,13 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.micromanager.MainActivity" />
         </activity>
-
-        <activity android:name=".Help_Page"
+        <activity
+            android:name=".Help_Page"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.micromanager.MainActivity"/>
+                android:value="com.example.micromanager.MainActivity" />
         </activity>
-
         <activity
             android:name=".Add_Screen"
             android:parentActivityName=".MainActivity">
@@ -31,7 +31,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.micromanager.MainActivity" />
         </activity>
-
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -39,7 +38,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>

@@ -1,9 +1,11 @@
 package com.example.micromanager;
 
 import android.graphics.Color;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
 import android.widget.TextView;
@@ -55,12 +57,10 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
-        TextView txtItemName;
-        TextView txtItemDate;
-        TextView txtItemType;
-        ImageView delete;
-        ImageView priorityLabel;
-        TextView menu;
+        TextView txtItemName, txtItemDate, txtItemType, menu;
+        ImageView delete, priorityLabel;
+        CheckBox checkBox;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             txtItemName = itemView.findViewById(R.id.txt_item_name);
@@ -68,9 +68,11 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
             txtItemType = itemView.findViewById(R.id.txt_item_type);
             delete = itemView.findViewById(R.id.img_delete);
             menu = itemView.findViewById(R.id.textViewOptions);
+            checkBox = itemView.findViewById(R.id.markAsDoneBox);
             priorityLabel = itemView.findViewById(R.id.priorityLabel);
 
             delete.setOnClickListener(this::onClick);
+            checkBox.setOnClickListener(this::whenChecked);
 
             menu.setOnClickListener(view -> {
                 int position = getAdapterPosition();
@@ -92,17 +94,6 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
                                 priorityLabel.setVisibility(View.INVISIBLE);
                             }
                             break;
-                        case R.id.markAsDone:
-                            //change background color
-                            if(checker == 0) {
-                                itemView.setBackgroundColor(Color.HSVToColor(new float[]{109, 100, 50}));
-                                checker = 1;
-                            }
-                            else{
-                                itemView.setBackgroundColor(Color.TRANSPARENT);
-                                checker = 0;
-                            }
-                            break;
                         default:
                             break;
                     }
@@ -112,6 +103,15 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
                 popup.show();
 
             });
+        }
+
+        public void whenChecked(View view) {
+            int position = getAdapterPosition();
+            AssignmentTable assignmentTable = assignmentList.get(position);
+            Log.d("TABLE", assignmentTable.name + " " + assignmentTable.dueDate + " "+ assignmentTable.type + " " + assignmentTable.isCompleted);
+            checkBox.setChecked(true);
+            assignmentTable.isCompleted = true;
+            Log.d("TABLE", assignmentTable.name + " " + assignmentTable.dueDate + " "+ assignmentTable.type + " " + assignmentTable.isCompleted);
         }
 
         @Override

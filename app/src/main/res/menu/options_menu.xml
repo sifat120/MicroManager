@@ -5,9 +5,5 @@
         android:id="@+id/priority"
         android:title="@string/setPriority" />
 
-    <item
-        android:id="@+id/markAsDone"
-        android:title="@string/markAsDone" />
-
 
 </menu>

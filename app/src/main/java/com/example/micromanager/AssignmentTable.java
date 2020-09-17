@@ -24,4 +24,5 @@ public class AssignmentTable {
 
     @ColumnInfo(name="isCompleted")
     public boolean isCompleted;
+
 }
