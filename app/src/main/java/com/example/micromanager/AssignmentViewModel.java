@@ -1,6 +1,7 @@
 package com.example.micromanager;
 
 import android.app.Application;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
@@ -32,8 +33,12 @@ public class AssignmentViewModel extends AndroidViewModel {
         itemRepository.updateItem(assignmentTable);
     }
 
-    public LiveData<Boolean> getPriority(){
-        return itemRepository.getPriority();
+    public void deleteAllCompletedAssignments(){
+        itemRepository.deleteCompletedAssignments();
+    }
+
+    public void deleteOverdueAssignments(){
+        itemRepository.deleteOverdueAssignments();
     }
 
     public void deleteItem(AssignmentTable assignmentTable){

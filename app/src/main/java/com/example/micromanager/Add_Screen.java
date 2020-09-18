@@ -77,7 +77,6 @@ public class Add_Screen extends AppCompatActivity implements AdapterView.OnItemS
     public void checkTextFields(View view){
         name = nameField.getText().toString();
         due_date = dueDateField.getText().toString();
-        Log.d("FIELDS", name + " " + type + " " + due_date);
         if(due_date == null || due_date.equals("")) {
             Toast.makeText(this, "Missing Field", Toast.LENGTH_SHORT).show();
         }else{
@@ -96,7 +95,7 @@ public class Add_Screen extends AppCompatActivity implements AdapterView.OnItemS
 
         //setting priority to not high and is completed to false
         assignmentTable.isCompleted = false;
-        assignmentTable.isHighPriority = false;
+        assignmentTable.isOverdue = false;
 
         nameField.getText().clear();
         dueDateField.getText().clear();

@@ -13,7 +13,7 @@ public abstract class AssignmentDatabase extends RoomDatabase {
     public static synchronized AssignmentDatabase getInstance(Context context){
         if(assignmentDatabaseInstance==null){
             assignmentDatabaseInstance = Room.databaseBuilder(context.getApplicationContext(), AssignmentDatabase.class,
-                    "myDatabase").build();
+                    "myDatabase").fallbackToDestructiveMigration().build();
         }
         return assignmentDatabaseInstance;
     }

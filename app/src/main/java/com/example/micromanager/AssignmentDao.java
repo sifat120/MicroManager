@@ -14,12 +14,14 @@ public interface AssignmentDao {
     @Insert
     void insertItem(AssignmentTable assignmentTables);
 
-
     @Query("SELECT * FROM assignment")
     LiveData<List<AssignmentTable>> getAllItems();
 
-    @Query("SELECT highPriority FROM assignment")
-    LiveData<Boolean> getPriority();
+    @Query("DELETE FROM assignment WHERE isOverdue = 1")
+    void deleteOverdueAssignments();
+
+    @Query("DELETE FROM assignment WHERE isCompleted = 1")
+    void deleteAllMarkedAsDone();
 
     @Update
     void update(AssignmentTable assignmentTable);

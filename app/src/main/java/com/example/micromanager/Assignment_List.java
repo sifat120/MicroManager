@@ -14,7 +14,9 @@ import android.os.Bundle;
 import android.text.Layout;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -29,15 +31,12 @@ import java.util.Locale;
 
 public class Assignment_List extends AppCompatActivity {
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_assignment__list);
 
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
-
-
         AssignmentViewModel aViewModel = new ViewModelProvider(this).get(AssignmentViewModel.class);
 
         String myFormat = "MM/dd/yy";
@@ -48,8 +47,7 @@ public class Assignment_List extends AppCompatActivity {
         recyclerView.setAdapter(itemAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        RecyclerView.ItemDecoration itemDecoration = new
-                DividerItemDecoration(this,DividerItemDecoration.VERTICAL);
+        RecyclerView.ItemDecoration itemDecoration = new DividerItemDecoration(this,DividerItemDecoration.VERTICAL);
         recyclerView.addItemDecoration(itemDecoration);
 
         aViewModel.getItems().observe(this, assignmentTables -> {
@@ -78,6 +76,7 @@ public class Assignment_List extends AppCompatActivity {
 
     }
 
+
     public void addAssignments(View view) {
         Intent intent = new Intent(this,Add_Screen.class);
         startActivity(intent);
@@ -87,5 +86,12 @@ public class Assignment_List extends AppCompatActivity {
     public void goToHelpScreen(View view) {
         Intent intent = new Intent(this, Help_Page.class);
         startActivity(intent);
+    }
+
+    public void tidyUpAssignments(View view) {
+        AssignmentViewModel assignmentViewModel = new ViewModelProvider(this).get(AssignmentViewModel.class);
+        assignmentViewModel.deleteAllCompletedAssignments();
+        assignmentViewModel.deleteOverdueAssignments();
+        Toast.makeText(this, "Good Work!", Toast.LENGTH_SHORT).show();
     }
 }

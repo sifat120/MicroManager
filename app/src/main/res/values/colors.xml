@@ -10,4 +10,5 @@
     <color name="darkBlueBackground">#191970</color>
     <color name="green">#28d900</color>
     <color name="white">#FFFFFF</color>
+    <color name="darkRed">#8b0000</color>
 </resources>

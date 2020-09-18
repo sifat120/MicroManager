@@ -60,7 +60,7 @@
         app:srcCompat="@drawable/helpbutton" />
 
     <ImageView
-        android:id="@+id/tidyUpIcon "
+        android:id="@+id/tidyUpButton"
         android:layout_width="126dp"
         android:layout_height="87dp"
         android:contentDescription="@string/tidyUpIconDesc"
@@ -70,6 +70,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.91"
-        app:srcCompat="@drawable/tidyupicon" />
+        app:srcCompat="@drawable/tidyupicon"
+        android:onClick="tidyUpAssignments"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
