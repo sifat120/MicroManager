@@ -27,4 +27,5 @@
     <string name="helpButtonDesc">Help Button</string>
     <string name="aboutButton">About</string>
     <string name="tidyUpIconDesc">Tidy Up</string>
+    <string name="DeleteButtonDesc">Delete</string>
 </resources>

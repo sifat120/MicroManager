@@ -17,8 +17,6 @@ public interface AssignmentDao {
     @Query("SELECT * FROM assignment")
     LiveData<List<AssignmentTable>> getAllItems();
 
-    @Query("DELETE FROM assignment WHERE isOverdue = 1")
-    void deleteOverdueAssignments();
 
     @Query("DELETE FROM assignment WHERE isCompleted = 1")
     void deleteAllMarkedAsDone();

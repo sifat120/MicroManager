@@ -19,9 +19,6 @@ public class AssignmentTable {
     @ColumnInfo(name="assignment_type")
     public String type;
 
-    @ColumnInfo(name="isOverdue")
-    public boolean isOverdue;
-
     @ColumnInfo(name="isCompleted")
     public boolean isCompleted;
 }

@@ -37,9 +37,6 @@ public class AssignmentViewModel extends AndroidViewModel {
         itemRepository.deleteCompletedAssignments();
     }
 
-    public void deleteOverdueAssignments(){
-        itemRepository.deleteOverdueAssignments();
-    }
 
     public void deleteItem(AssignmentTable assignmentTable){
         itemRepository.deleteItem(assignmentTable);

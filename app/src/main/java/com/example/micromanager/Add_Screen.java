@@ -95,7 +95,6 @@ public class Add_Screen extends AppCompatActivity implements AdapterView.OnItemS
 
         //setting priority to not high and is completed to false
         assignmentTable.isCompleted = false;
-        assignmentTable.isOverdue = false;
 
         nameField.getText().clear();
         dueDateField.getText().clear();

@@ -1,11 +1,13 @@
 package com.example.micromanager;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -72,7 +74,18 @@ public class Assignment_List extends AppCompatActivity {
         ActionBar ab = getSupportActionBar();
         assert ab != null;
         ab.setDisplayHomeAsUpEnabled(true);
+        new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.RIGHT) {
+            @Override
+            public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
+                return false;
+            }
 
+            @Override
+            public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
+                aViewModel.deleteItem(itemAdapter.getAssignmentTableAt(viewHolder.getAdapterPosition()));
+                Toast.makeText(Assignment_List.this,"Deleted!",Toast.LENGTH_SHORT).show();
+            }
+        }).attachToRecyclerView(recyclerView);
 
     }
 
@@ -91,7 +104,6 @@ public class Assignment_List extends AppCompatActivity {
     public void tidyUpAssignments(View view) {
         AssignmentViewModel assignmentViewModel = new ViewModelProvider(this).get(AssignmentViewModel.class);
         assignmentViewModel.deleteAllCompletedAssignments();
-        assignmentViewModel.deleteOverdueAssignments();
         Toast.makeText(this, "Good Work!", Toast.LENGTH_SHORT).show();
     }
 }

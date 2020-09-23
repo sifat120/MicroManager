@@ -60,18 +60,22 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
         }else {
             holder.checkBox.setChecked(false);
         }
-
         Date currentDate = getCurrentDate();
         String dueDateAsString = assignmentTable.dueDate;
         Date dueDateOfCurrentAssignment = parseDate(dueDateAsString);
+        if(currentDate.equals(dueDateOfCurrentAssignment)){
+            holder.txtItemDate.setText("Due: Today");
+            holder.itemView.setBackgroundColor(Color.parseColor("#228b22"));
+        }
         if(dueDateOfCurrentAssignment.before(currentDate)){
-            assignmentTable.isOverdue = true;
+            holder.itemView.setBackgroundColor(Color.parseColor("#8b0000"));
+            holder.txtItemDate.setTextColor(Color.parseColor("#ff7a7a"));
         }
 
 
 
         String assignment = "\nName: " + assignmentTable.name + "\nDue Date: " + assignmentTable.dueDate + "\nType: " +
-                assignmentTable.type + "\nOverdue: " + assignmentTable.isOverdue + "\nCompleted: " + assignmentTable.isCompleted;
+                assignmentTable.type + "\nCompleted: " + assignmentTable.isCompleted;
         Log.d("AT END OF ONBIND", assignment);
     }
 
@@ -94,6 +98,10 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
         String currentDateAsString = sdf.format(calendar.getTime());
         Date currentDate = parseDate(currentDateAsString);
         return currentDate;
+    }
+
+    public AssignmentTable getAssignmentTableAt(int position){
+        return assignmentList.get(position);
     }
 
 
@@ -126,8 +134,13 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
             int position = getAdapterPosition();
             AssignmentTable assignmentTable = assignmentList.get(position);
             ItemRepository repository = new ItemRepository(view.getContext());
-            checkBox.setChecked(true);
-            assignmentTable.isCompleted = true;
+            if(checkBox.isChecked()){
+                assignmentTable.isCompleted = true;
+                checkBox.setChecked(false);
+            }else{
+                assignmentTable.isCompleted = false;
+                checkBox.setChecked(true);
+            }
             repository.updateItem(assignmentTable);
         }
 
@@ -137,6 +150,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
             AssignmentTable assignmentTable = assignmentList.get(position);
             ItemRepository itemRepository = new ItemRepository(view.getContext());
             itemRepository.deleteItem(assignmentTable);
+            itemRepository.updateItem(assignmentTable);
             Toast.makeText(view.getContext(),"Deleted!",Toast.LENGTH_SHORT).show();
         }
 
