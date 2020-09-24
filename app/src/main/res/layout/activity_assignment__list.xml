@@ -32,45 +32,57 @@
         app:title="Your Assignments"
         app:titleTextColor="@color/mainTextColor" />
 
-    <ImageView
-        android:id="@+id/add_button"
-        android:layout_width="165dp"
-        android:layout_height="118dp"
-        android:contentDescription="@string/add_button"
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/Add_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/primaryButtonColor"
+        android:clickable="true"
         android:onClick="addAssignments"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/backtohomeBar"
-        app:layout_constraintVertical_bias="0.916"
-        app:srcCompat="@drawable/addbutton" />
+        app:layout_constraintTop_toTopOf="@+id/recyclerView"
+        app:layout_constraintVertical_bias="0.941"
+        app:srcCompat="@drawable/ic_baseline_add_24" />
 
     <ImageView
-        android:id="@+id/helpButton"
-        android:layout_width="198dp"
-        android:layout_height="110dp"
-        android:contentDescription="@string/helpButtonDesc"
-        android:onClick="goToHelpScreen"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/add_button"
-        app:layout_constraintHorizontal_bias="0.266"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/backtohomeBar"
-        app:layout_constraintVertical_bias="0.917"
-        app:srcCompat="@drawable/helpbutton" />
-
-    <ImageView
-        android:id="@+id/tidyUpButton"
-        android:layout_width="126dp"
-        android:layout_height="87dp"
-        android:contentDescription="@string/tidyUpIconDesc"
+        android:id="@+id/imageView2"
+        android:layout_width="410dp"
+        android:layout_height="63dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.947"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/bottom_nav_bar" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="37dp"
+        android:layout_height="39dp"
+        android:onClick="goToHelpScreen"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.173"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.91"
-        app:srcCompat="@drawable/tidyupicon"
-        android:onClick="tidyUpAssignments"/>
+        app:layout_constraintVertical_bias="0.974"
+        app:srcCompat="@drawable/ic_baseline_help_24" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="40dp"
+        android:layout_height="38dp"
+        android:onClick="tidyUpAssignments"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.754"
+        app:layout_constraintStart_toEndOf="@+id/imageView5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.974"
+        app:srcCompat="@drawable/ic_baseline_check_circle_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
