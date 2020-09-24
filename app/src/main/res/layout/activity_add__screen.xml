@@ -4,23 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Add_Screen"
-    android:background="@drawable/background">
+    android:background="@color/bottomtaskbarcolor"
+    tools:context=".Add_Screen">
 
     <EditText
         android:id="@+id/Due_Date_Field"
         android:layout_width="336dp"
         android:layout_height="54dp"
-        android:hint="@string/assignment_due_date_field"
         android:clickable="true"
-        android:inputType="date"
         android:focusable="false"
+        android:hint="@string/assignment_due_date_field"
+        android:inputType="date"
+        android:textColor="@color/mainTextColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.336" />
+        app:layout_constraintVertical_bias="0.336"
+        android:autofillHints="@string/dueDateText"/>
 
     <EditText
         android:id="@+id/Name_Field"
@@ -34,7 +36,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.809"
-        />
+        android:autofillHints="@string/nameText"
+        android:inputType="text"
+        android:textColor="@color/mainTextColor" />
 
     <Button
         android:id="@+id/Add_Button"
@@ -85,24 +89,25 @@
         android:layout_width="338dp"
         android:layout_height="32dp"
         android:text="@string/assignment_type_field"
-        android:textSize="18dp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.534"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/backtohomeBar"
-        app:layout_constraintVertical_bias="0.379" />
+        app:layout_constraintVertical_bias="0.377" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/calenderIcon"
         android:layout_width="134dp"
         android:layout_height="130dp"
+        android:onClick="goToAssignmentListScreen"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Add_Button"
         app:srcCompat="@drawable/calender"
-        android:onClick="goToAssignmentListScreen"/>
+        android:contentDescription="@string/dueDateText"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

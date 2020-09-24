@@ -38,37 +38,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.655" />
 
-    <ImageView
-        android:id="@+id/helpButton"
-        android:layout_width="102dp"
-        android:layout_height="90dp"
-        android:contentDescription="@string/helpButtonDesc"
-        android:onClick="goToHelpScreen"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo"
-        app:layout_constraintVertical_bias="0.939"
-        app:srcCompat="@drawable/helpbutton" />
-
-    <Button
-        android:id="@+id/about_button"
-        android:layout_width="65dp"
-        android:layout_height="26dp"
-        android:background="@drawable/custom_button"
-        android:onClick="goToAboutPage"
-        android:text="@string/aboutButton"
-        android:textAllCaps="false"
-        android:textColor="@color/mainTextColor"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.896"
-        app:layout_constraintStart_toEndOf="@+id/helpButton"
-        app:layout_constraintTop_toBottomOf="@+id/logo"
-        app:layout_constraintVertical_bias="0.88" />
-
     <TextView
         android:id="@+id/or_bar"
         android:layout_width="wrap_content"
@@ -96,5 +65,33 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/or_bar"
         app:layout_constraintVertical_bias="0.158" />
+
+    <ImageView
+        android:id="@+id/aboutIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/aboutButton"
+        android:onClick="goToAboutPage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.958"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.958"
+        app:srcCompat="@drawable/ic_baseline_info_24" />
+
+    <ImageView
+        android:id="@+id/helpIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/aboutIcon"
+        app:layout_constraintHorizontal_bias="0.046"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.958"
+        app:srcCompat="@drawable/ic_baseline_help_24"
+        android:onClick="goToHelpScreen"
+        android:contentDescription="@string/helpButtonDesc"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
