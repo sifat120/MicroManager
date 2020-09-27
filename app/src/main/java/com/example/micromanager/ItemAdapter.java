@@ -49,34 +49,40 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        //Fetching the database table at the current position from database list
         AssignmentTable assignmentTable = assignmentList.get(position);
+        //Instantiating the views
         String due = "Due: "+assignmentTable.dueDate;
         String type = assignmentTable.type;
         holder.txtItemName.setText(assignmentTable.name);
         holder.txtItemDate.setText(due);
         holder.txtItemType.setText(type);
+        //Setting the checkboxes to their saved state
         if(assignmentTable.isCompleted == true){
             holder.checkBox.setChecked(true);
         }else {
             holder.checkBox.setChecked(false);
         }
+        //Fetching current due date and parsing
         Date currentDate = getCurrentDate();
         String dueDateAsString = assignmentTable.dueDate;
         Date dueDateOfCurrentAssignment = parseDate(dueDateAsString);
+        //changing the background color programmatically
         if(currentDate.equals(dueDateOfCurrentAssignment)){
-            holder.txtItemDate.setText("Due: Today");
-            holder.itemView.setBackgroundColor(Color.parseColor("#228b22"));
+            holder.txtItemDate.setText("Due: Today"); //changes due date
+            holder.itemView.setBackgroundColor(Color.parseColor("#228b22")); // changes color to green
+            Log.d("REACHED", "GREEN COLOR");
         }
         if(dueDateOfCurrentAssignment.before(currentDate)){
-            holder.itemView.setBackgroundColor(Color.parseColor("#8b0000"));
-            holder.txtItemDate.setTextColor(Color.parseColor("#ff7a7a"));
+            holder.itemView.setBackgroundColor(Color.parseColor("#8b0000")); // turns the background red
+            holder.txtItemDate.setTextColor(Color.parseColor("#ff7a7a")); // turns text bright red
+            Log.d("REACHED", "RED COLOR");
         }
-
-
-
+        //Logging fields
         String assignment = "\nName: " + assignmentTable.name + "\nDue Date: " + assignmentTable.dueDate + "\nType: " +
                 assignmentTable.type + "\nCompleted: " + assignmentTable.isCompleted;
-        Log.d("AT END OF ONBIND", assignment);
+        Log.d("AT END OF ONBIND", "\n" + assignment);
+
     }
 
     public Date parseDate(String date){
@@ -103,7 +109,6 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
     public AssignmentTable getAssignmentTableAt(int position){
         return assignmentList.get(position);
     }
-
 
 
     @Override
@@ -146,11 +151,16 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
 
         @Override
         public void onClick(View view) {
+            //Getting database table at the specified position to delete
             int position = getAdapterPosition();
             AssignmentTable assignmentTable = assignmentList.get(position);
             ItemRepository itemRepository = new ItemRepository(view.getContext());
+            //Deleting from the database
             itemRepository.deleteItem(assignmentTable);
+            assignmentList.remove(position);
             itemRepository.updateItem(assignmentTable);
+            notifyDataSetChanged();
+            notifyItemRemoved(position);
             Toast.makeText(view.getContext(),"Deleted!",Toast.LENGTH_SHORT).show();
         }
 

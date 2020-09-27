@@ -83,6 +83,8 @@ public class Assignment_List extends AppCompatActivity {
             @Override
             public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
                 aViewModel.deleteItem(itemAdapter.getAssignmentTableAt(viewHolder.getAdapterPosition()));
+                itemAdapter.notifyDataSetChanged();
+                itemAdapter.notifyItemRemoved(viewHolder.getAdapterPosition());
                 Toast.makeText(Assignment_List.this,"Deleted!",Toast.LENGTH_SHORT).show();
             }
         }).attachToRecyclerView(recyclerView);
