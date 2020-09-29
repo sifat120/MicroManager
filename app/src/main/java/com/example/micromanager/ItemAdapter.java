@@ -70,7 +70,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
         //changing the background color programmatically
         if(currentDate.equals(dueDateOfCurrentAssignment)){
             holder.txtItemDate.setText("Due: Today"); //changes due date
-            holder.txtItemDate.setTextColor(Color.parseColor("#ff0000");
+            holder.txtItemDate.setTextColor(Color.parseColor("#ff0000"));
             holder.itemView.setBackgroundColor(Color.parseColor("#228b22")); // changes color to green
             Log.d("REACHED", "GREEN COLOR");
         }else if(dueDateOfCurrentAssignment.before(currentDate)){
@@ -78,7 +78,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
             holder.txtItemDate.setTextColor(Color.parseColor("#ff7a7a")); // turns text bright red
             Log.d("REACHED", "RED COLOR");
         }else{
-            holder.txtItemName.setBackgroundColor(Color.parseColor("#191970"));
+            holder.itemView.setBackgroundColor(Color.parseColor("#191970"));
             holder.txtItemDate.setTextColor(Color.parseColor("#ff0000"));
             holder.txtItemName.setTextSize(40);
             Log.d("REACHED", "NORMAL");
