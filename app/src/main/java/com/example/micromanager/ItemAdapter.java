@@ -70,13 +70,18 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
         //changing the background color programmatically
         if(currentDate.equals(dueDateOfCurrentAssignment)){
             holder.txtItemDate.setText("Due: Today"); //changes due date
+            holder.txtItemDate.setTextColor(Color.parseColor("#ff0000");
             holder.itemView.setBackgroundColor(Color.parseColor("#228b22")); // changes color to green
             Log.d("REACHED", "GREEN COLOR");
-        }
-        if(dueDateOfCurrentAssignment.before(currentDate)){
+        }else if(dueDateOfCurrentAssignment.before(currentDate)){
             holder.itemView.setBackgroundColor(Color.parseColor("#8b0000")); // turns the background red
             holder.txtItemDate.setTextColor(Color.parseColor("#ff7a7a")); // turns text bright red
             Log.d("REACHED", "RED COLOR");
+        }else{
+            holder.txtItemName.setBackgroundColor(Color.parseColor("#191970"));
+            holder.txtItemDate.setTextColor(Color.parseColor("#ff0000"));
+            holder.txtItemName.setTextSize(40);
+            Log.d("REACHED", "NORMAL");
         }
         //Logging fields
         String assignment = "\nName: " + assignmentTable.name + "\nDue Date: " + assignmentTable.dueDate + "\nType: " +
