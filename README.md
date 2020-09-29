@@ -11,7 +11,7 @@ their assignments so they don't fall behind
  * Overdue assignments are highlighted, this way Students can pay extra attention to these assignments.
  * If an assignment is done, students can check it off or delete it with the swipe of a finger.
   
-## Screenshots 
+## Screenshots: 
   ![Home Screen](HomeScreen.png) ![List Screen](ListScreen.png)
   
   ![Add Screen](AddScreen.png)
