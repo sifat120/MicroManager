@@ -15,3 +15,9 @@ their assignments so they don't fall behind
   ![Home Screen](HomeScreen.png) ![List Screen](ListScreen.png)
   
   ![Add Screen](AddScreen.png)
+
+### To Do: 
+ 1. Adding notifications to the app based on the due date of the assignment.
+ 2. Moving database to cloud firebase database
+ 
+ 
