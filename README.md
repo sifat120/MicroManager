@@ -12,8 +12,6 @@ their assignments so they don't fall behind
  * If an assignment is done, students can check it off or delete it with the swipe of a finger.
   
 ## Screenshots 
-  ![Home Screen](HomeScreen.png)
-  
-  ![List Screen](ListScreen.png)
+  ![Home Screen](HomeScreen.png) ![List Screen](ListScreen.png)
   
   ![Add Screen](AddScreen.png)
