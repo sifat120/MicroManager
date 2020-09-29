@@ -14,6 +14,6 @@ their assignments so they don't fall behind
 ## Screenshots 
   ![Home Screen](HomeScreen.png)
   
-  ![List Screen](ListScreen.png)
+  ![List Screen](ListScreen .png)
   
   ![Add Screen](AddScreen.png)
