@@ -58,7 +58,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
         holder.txtItemDate.setText(due);
         holder.txtItemType.setText(type);
         //Setting the checkboxes to their saved state
-        if(assignmentTable.isCompleted == true){
+        if(assignmentTable.isCompleted){
             holder.checkBox.setChecked(true);
         }else {
             holder.checkBox.setChecked(false);
@@ -67,26 +67,33 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
         Date currentDate = getCurrentDate();
         String dueDateAsString = assignmentTable.dueDate;
         Date dueDateOfCurrentAssignment = parseDate(dueDateAsString);
-        //changing the background color programmatically
+        //Changing the background color programmatically based on when the Assignment is due
         if(currentDate.equals(dueDateOfCurrentAssignment)){
-            holder.txtItemDate.setText("Due: Today"); //changes due date
+            // Turns background to green
+            holder.txtItemDate.setText("Due: Today");
             holder.txtItemDate.setTextColor(Color.parseColor("#ff0000"));
-            holder.itemView.setBackgroundColor(Color.parseColor("#228b22")); // changes color to green
+            holder.itemView.setBackgroundColor(Color.parseColor("#228b22"));
             Log.d("REACHED", "GREEN COLOR");
         }else if(dueDateOfCurrentAssignment.before(currentDate)){
-            holder.itemView.setBackgroundColor(Color.parseColor("#8b0000")); // turns the background red
-            holder.txtItemDate.setTextColor(Color.parseColor("#ff7a7a")); // turns text bright red
+            //Turns the background and text red
+            holder.itemView.setBackgroundColor(Color.parseColor("#8b0000"));
+            holder.txtItemDate.setTextColor(Color.parseColor("#ff7a7a"));
+            /*
+            Insert code to change the current assignmentTable.isOverdue to true
+            and update the database
+             */
             Log.d("REACHED", "RED COLOR");
         }else{
+            //Reverts color adn background to original
             holder.itemView.setBackgroundColor(Color.parseColor("#191970"));
             holder.txtItemDate.setTextColor(Color.parseColor("#ff0000"));
-            holder.txtItemName.setTextSize(40);
             Log.d("REACHED", "NORMAL");
         }
         //Logging fields
         String assignment = "\nName: " + assignmentTable.name + "\nDue Date: " + assignmentTable.dueDate + "\nType: " +
                 assignmentTable.type + "\nCompleted: " + assignmentTable.isCompleted;
         Log.d("AT END OF ONBIND", "\n" + assignment);
+
 
     }
 

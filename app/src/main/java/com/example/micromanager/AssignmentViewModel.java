@@ -33,6 +33,10 @@ public class AssignmentViewModel extends AndroidViewModel {
         itemRepository.updateItem(assignmentTable);
     }
 
+    public List<AssignmentTable> getOverdueAssignments(){
+        List<AssignmentTable> overdueAssignments= itemRepository.getOverdueAssignments();
+        return overdueAssignments;
+    }
     public void deleteAllCompletedAssignments(){
         itemRepository.deleteCompletedAssignments();
     }

@@ -24,6 +24,10 @@ public class ItemRepository {
         return AssignmentDatabase.getInstance(context).assignmentDao().getAllItems();
     }
 
+    public List<AssignmentTable> getOverdueAssignments(){
+        return AssignmentDatabase.getInstance(context).assignmentDao().getOverdueAssignments();
+    }
+
 
     public void deleteCompletedAssignments(){
         AsyncTask.execute(() -> AssignmentDatabase.getInstance(context).assignmentDao().deleteAllMarkedAsDone());

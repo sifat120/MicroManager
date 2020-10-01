@@ -21,6 +21,9 @@ public interface AssignmentDao {
     @Query("DELETE FROM assignment WHERE isCompleted = 1")
     void deleteAllMarkedAsDone();
 
+    @Query("SELECT * FROM assignment WHERE isOverdue = 1")
+    List<AssignmentTable> getOverdueAssignments();
+
     @Update
     void update(AssignmentTable assignmentTable);
 

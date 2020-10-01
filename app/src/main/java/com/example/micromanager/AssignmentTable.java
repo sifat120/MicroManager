@@ -21,4 +21,7 @@ public class AssignmentTable {
 
     @ColumnInfo(name="isCompleted")
     public boolean isCompleted;
+
+    @ColumnInfo(name="isOverdue")
+    public boolean isOverdue;
 }
