@@ -20,10 +20,13 @@
     <string name="sampleDueDate">Sample Date</string>
     <string name="mainLogoOnTitleScreen">Main Logo on the title screen</string>
     <string name="howToUseTitle">How To Use</string>
-    <string name="howToUseDirections">Our app is very simple to use!  \n\nTo start click Add Assignments, which brings you to a screen in which you wil be prompted to
-    enter the Name, Due Date (From a Calender), and type of assignment. Once you\'re done entering this information simply press add and your assignment has been added to the list! \n\nTo see the
-    list you can press the arrow on the top left to go to the home screen or you can press the calender logo to go to the schedule screen. In the schedule screen you can delete assignments, mark them as done, or
-    go back to adding assignments with the + button. To see a more visual tutorial of our app visit our youtube video: </string>
+    <string name="howToUseDirections1">This is the add button. By pressing this button you will be taken to the Add Screen</string>
+    <string name="howToUseDirections2">This is the add screen you can type in your assignments name, select the due date from
+        a calender, and set the type. When finished press \'Add\' to add your assignment</string>
+    <string name="howtoUseDirections3">Welcome to Micromanager! On our home screen you can click \'View Schedule\' to see your schedule or \'Add Assignments\' to go to the add screen</string>
+    <string name="assignmentListTutorial">"This is the assignment list screen. Here you can swipe at a single assignment to delete, or press the trash can to delete it as well. Press the plus at the bottom to go to the add screen. \n\n Assignments are color coded: Red for overdue, Green for due today, colorless for due in the future</string>
+    <string name="checkboxtutuorial">The checkbox on each assignment is the \'Mark As Done\' field where you can check off assignments you have completed</string>
+    <string name="todyupTutorial">Press this icon once you are ready to tidy up your assignments. This will remove any completed assignments</string>
     <string name="helpButtonDesc">Help</string>
     <string name="aboutButton">About</string>
     <string name="tidyUpIconDesc">Tidy Up</string>

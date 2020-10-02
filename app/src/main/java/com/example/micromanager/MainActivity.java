@@ -31,13 +31,13 @@ public class MainActivity extends AppCompatActivity {
         logo.setImageResource(logoRes);
         createNotificationChannel();
         AssignmentViewModel assignmentViewModel = new ViewModelProvider(this).get(AssignmentViewModel.class);
-        List<AssignmentTable> overDueAssignments = assignmentViewModel.getOverdueAssignments();
+       /* List<AssignmentTable> overDueAssignments = assignmentViewModel.getOverdueAssignments();
         if(overDueAssignments.size() > 0){
             for(int i = 0; i < overDueAssignments.size(); i++){
                 String overdueAssignmentName = overDueAssignments.get(i).name;
                 sendNotification(overdueAssignmentName);
             }
-        }
+        }*/
     }
 
     public void createNotificationChannel(){
