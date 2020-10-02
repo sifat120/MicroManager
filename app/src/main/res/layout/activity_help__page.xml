@@ -141,7 +141,7 @@
             android:layout_width="321dp"
             android:layout_height="106dp"
             android:layout_marginTop="20dp"
-            android:text="@string/checkboxtutuorial"
+            android:text="@string/todyupTutorial"
             android:textColor="@color/mainTextColor"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
