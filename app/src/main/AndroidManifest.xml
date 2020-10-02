@@ -9,7 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".About_Page"></activity>
+        <activity
+            android:name=".About_Page"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.micromanager.MainActivity" />
+        </activity>
         <activity
             android:name=".Assignment_List"
             android:parentActivityName=".MainActivity">

@@ -70,7 +70,7 @@
         android:id="@+id/aboutIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:contentDescription="@string/aboutButton"
+        android:contentDescription="@string/aboutTitle"
         android:onClick="goToAboutPage"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

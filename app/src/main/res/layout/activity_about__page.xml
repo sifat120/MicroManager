@@ -4,12 +4,80 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
-    android:layout_width="match_parent">
+    android:layout_width="match_parent"
+    android:background="@drawable/gradient_background">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/darkBlueBackground"
         tools:context=".About_Page">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/safwaan_profile_image"
+            android:layout_width="145dp"
+            android:layout_height="154dp"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/profilephotocropped"
+            app:civ_border_color="#00000000"
+            app:civ_border_width="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/backtohomeBar"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/safwaanName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/SafwaanName"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/safwaan_profile_image" />
+        <TextView
+            android:id="@+id/safwaanRole"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/SafwaanRole"
+            android:textAlignment="center"
+            android:textColor="@color/mainTextColor"
+            android:textStyle="italic"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/safwaanName"/>
+
+        <TextView
+            android:id="@+id/safwaanDesc"
+            android:layout_width="276dp"
+            android:layout_height="186dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/SafwaanDesc"
+            android:textAlignment="center"
+            android:textColor="@color/mainTextColor"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/safwaanRole" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/backtohomeBar"
+            android:layout_width="411dp"
+            android:layout_height="53dp"
+            android:background="#00323213"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/AppTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:subtitleTextColor="@color/mainTextColor"
+            app:title="@string/aboutTitle"
+            app:titleTextColor="@color/mainTextColor" />
+
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

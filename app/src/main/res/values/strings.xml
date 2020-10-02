@@ -28,7 +28,10 @@
     <string name="checkboxtutuorial">The checkbox on each assignment is the \'Mark As Done\' field where you can check off assignments you have completed</string>
     <string name="todyupTutorial">Press this icon once you are ready to tidy up your assignments. This will remove any completed assignments</string>
     <string name="helpButtonDesc">Help</string>
-    <string name="aboutButton">About</string>
+    <string name="aboutTitle">About Us</string>
+    <string name="SafwaanName">Safwaan Taher</string>
+    <string name="SafwaanRole">Project Lead</string>
+    <string name="SafwaanDesc">Safwaan is a senior at Redmond High School who is passionate about all things computer science, and is particularly interested in the field of Artificial Intelligence. When he isn\'t breaking his head over bugs in his code, he enjoys gaming and playing a variety of sports with his friends.</string>
     <string name="tidyUpIconDesc">Tidy Up</string>
     <string name="DeleteButtonDesc">Delete</string>
 </resources>
