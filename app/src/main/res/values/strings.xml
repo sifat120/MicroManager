@@ -31,7 +31,12 @@
     <string name="aboutTitle">About Us</string>
     <string name="SafwaanName">Safwaan Taher</string>
     <string name="SafwaanRole">Project Lead</string>
-    <string name="SafwaanDesc">Safwaan is a senior at Redmond High School who is passionate about all things computer science, and is particularly interested in the field of Artificial Intelligence. When he isn\'t breaking his head over bugs in his code, he enjoys gaming and playing a variety of sports with his friends.</string>
+    <string name="SafwaanDesc">As project lead Safwaan oversaw backend development, created and led UI and UI design, implemented improvements to the project based on suggestions and planned out the project. \n\nYou can learn more about Safwaan here: </string>
+    <string name="SafwaanLink">https://www.linkedin.com/in/safwaan-taher-5042511b0/</string>
+    <string name="HumzaName">Humza Lala</string>
+    <string name="HumzaRole">Lead Backend Developer</string>
+    <string name="HumzaDesc">As lead backend developer Humza implemented the many classes involved in Android\'s Room database for storing the assignments. He also led development on the assignment list screen with Android\'s RecyclerView. \n\nYou can learn more about Humza here:</string>
+    <string name="HumzaLink">https://www.linkedin.com/in/humza-lala-140a101a5/</string>
     <string name="tidyUpIconDesc">Tidy Up</string>
     <string name="DeleteButtonDesc">Delete</string>
 </resources>

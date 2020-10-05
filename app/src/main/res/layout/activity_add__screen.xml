@@ -15,7 +15,6 @@
         android:focusable="false"
         android:hint="@string/assignment_due_date_field"
         android:inputType="date"
-        android:textColor="@color/mainTextColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
@@ -37,8 +36,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.809"
         android:autofillHints="@string/nameText"
-        android:inputType="text"
-        android:textColor="@color/mainTextColor" />
+        android:inputType="text" />
 
     <Button
         android:id="@+id/Add_Button"

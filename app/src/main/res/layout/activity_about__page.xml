@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:background="@drawable/gradient_background">
+    android:background="@color/darkBlueBackground">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -53,8 +53,8 @@
 
         <TextView
             android:id="@+id/safwaanDesc"
-            android:layout_width="276dp"
-            android:layout_height="186dp"
+            android:layout_width="286dp"
+            android:layout_height="145dp"
             android:layout_marginTop="15dp"
             android:text="@string/SafwaanDesc"
             android:textAlignment="center"
@@ -63,6 +63,20 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/safwaanRole" />
+
+        <TextView
+            android:id="@+id/safwaanLink"
+            android:autoLink="all"
+            android:clickable="true"
+            android:layout_width="281dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="2dp"
+            android:text="@string/SafwaanLink"
+            android:textAlignment="center"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/safwaanDesc" />
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/backtohomeBar"
@@ -77,6 +91,72 @@
             app:subtitleTextColor="@color/mainTextColor"
             app:title="@string/aboutTitle"
             app:titleTextColor="@color/mainTextColor" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/Humza_profile_photo"
+            android:layout_width="145dp"
+            android:layout_height="154dp"
+            android:layout_marginTop="125dp"
+            android:src="@drawable/humzapfp"
+            app:civ_border_color="#00000000"
+            app:civ_border_width="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/safwaanLink"
+            app:layout_constraintVertical_bias="0.0" />
+        <TextView
+            android:id="@+id/HumzaName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/HumzaName"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Humza_profile_photo" />
+        <TextView
+            android:id="@+id/HumzaRole"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/HumzaRole"
+            android:textAlignment="center"
+            android:textColor="@color/mainTextColor"
+            android:textStyle="italic"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/HumzaName"/>
+
+        <TextView
+            android:id="@+id/HumzaDesc"
+            android:layout_width="305dp"
+            android:layout_height="171dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/HumzaDesc"
+            android:textAlignment="center"
+            android:textColor="@color/mainTextColor"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/HumzaRole" />
+
+        <TextView
+            android:id="@+id/HumzaLink"
+            android:autoLink="all"
+            android:clickable="true"
+            android:layout_width="281dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="2dp"
+            android:text="@string/HumzaLink"
+            android:textAlignment="center"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/HumzaDesc" />
 
 
 
