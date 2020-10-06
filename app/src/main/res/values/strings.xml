@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">micromanager</string>
-    <string name="assignment_name_field">Name</string>
+    <string name="assignment_name_field">Name (Please shorten)</string>
     <string name="add_assignment">Add Assignments</string>
     <string name="back_to_home">Home</string>
     <string name="optionsMenu">&#8942;</string>
@@ -31,12 +31,16 @@
     <string name="aboutTitle">About Us</string>
     <string name="SafwaanName">Safwaan Taher</string>
     <string name="SafwaanRole">Project Lead</string>
-    <string name="SafwaanDesc">As project lead Safwaan oversaw backend development, created and led UI and UI design, implemented improvements to the project based on suggestions and planned out the project. \n\nYou can learn more about Safwaan here: </string>
+    <string name="SafwaanDesc">As project lead Safwaan oversaw backend development, created and led UI design, implemented improvements to the project based on suggestions and planned out the project. \n\nYou can learn more about Safwaan here: </string>
     <string name="SafwaanLink">https://www.linkedin.com/in/safwaan-taher-5042511b0/</string>
     <string name="HumzaName">Humza Lala</string>
     <string name="HumzaRole">Lead Backend Developer</string>
     <string name="HumzaDesc">As lead backend developer Humza implemented the many classes involved in Android\'s Room database for storing the assignments. He also led development on the assignment list screen with Android\'s RecyclerView. \n\nYou can learn more about Humza here:</string>
     <string name="HumzaLink">https://www.linkedin.com/in/humza-lala-140a101a5/</string>
+    <string name="SifatName">Sifat Hasan</string>
+    <string name="SifatRole">Assistant Backend Developer</string>
+    <string name="SifatDesc">As Assistant Backed Developer, Sifat contributed to implementing Android Studio\'s Room Database, suggested improvements and helped fix bugs and issues within development. \n\nYou can learn more about Sifat here: </string>
+    <string name="SifatLink">https://www.linkedin.com/in/sifat-hasan-13387a187/</string>
     <string name="tidyUpIconDesc">Tidy Up</string>
     <string name="DeleteButtonDesc">Delete</string>
 </resources>
