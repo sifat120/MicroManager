@@ -29,41 +29,6 @@ public class MainActivity extends AppCompatActivity {
         ImageView logo = (ImageView) findViewById(R.id.logo);
         int logoRes = logo.getResources().getIdentifier("@drawable/logo", null,this.getPackageName());
         logo.setImageResource(logoRes);
-        createNotificationChannel();
-        AssignmentViewModel assignmentViewModel = new ViewModelProvider(this).get(AssignmentViewModel.class);
-       /* List<AssignmentTable> overDueAssignments = assignmentViewModel.getOverdueAssignments();
-        if(overDueAssignments.size() > 0){
-            for(int i = 0; i < overDueAssignments.size(); i++){
-                String overdueAssignmentName = overDueAssignments.get(i).name;
-                sendNotification(overdueAssignmentName);
-            }
-        }*/
-    }
-
-    public void createNotificationChannel(){
-        notifyManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-        NotificationChannel notificationChannel = new NotificationChannel(PRIMARY_CHANNEL_ID, "Mascot Notification", NotificationManager.IMPORTANCE_HIGH);
-        notificationChannel.enableLights(true);
-        notificationChannel.setLightColor(Color.RED);
-        notificationChannel.enableVibration(true);
-        notificationChannel.setDescription("Notification");
-        notifyManager.createNotificationChannel(notificationChannel);
-    }
-
-    private NotificationCompat.Builder getNotificationBuilder(String overdueAssignmentName){
-        Intent notificationIntent = new Intent(this, Assignment_List.class);
-        PendingIntent notificationPendingIntent = PendingIntent.getActivity(this,
-                NOTIFICATION_ID, notificationIntent, PendingIntent.FLAG_UPDATE_CURRENT);
-
-        NotificationCompat.Builder notifyBuilder = new NotificationCompat.Builder(this, PRIMARY_CHANNEL_ID).setContentTitle("Check your Schedule! ")
-                .setContentText(overdueAssignmentName + " is overdue!").setSmallIcon(R.drawable.ic_notification).setContentIntent(notificationPendingIntent)
-                .setAutoCancel(true).setPriority(NotificationCompat.PRIORITY_HIGH).setDefaults(NotificationCompat.DEFAULT_ALL);
-        return notifyBuilder;
-    }
-
-    public void sendNotification(String overdueAssignmentName){
-        NotificationCompat.Builder notifyBuilder = getNotificationBuilder(overdueAssignmentName);
-        notifyManager.notify(NOTIFICATION_ID, notifyBuilder.build());
     }
 
 
