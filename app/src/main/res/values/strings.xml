@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">micromanager</string>
+    <string name="app_name">Micromanager</string>
     <string name="assignment_name_field">Name (Please shorten)</string>
     <string name="add_assignment">Add Assignments</string>
     <string name="back_to_home">Home</string>
@@ -24,11 +24,13 @@
     <string name="howToUseDirections2">This is the add screen you can type in your assignments name, select the due date from
         a calender, and set the type. When finished press \'Add\' to add your assignment</string>
     <string name="howtoUseDirections3">Welcome to Micromanager! On our home screen you can click \'View Schedule\' to see your schedule or \'Add Assignments\' to go to the add screen</string>
-    <string name="assignmentListTutorial">"This is the assignment list screen. Here you can swipe at a single assignment to delete, or press the trash can to delete it as well. Press the plus at the bottom to go to the add screen. \n\n Assignments are color coded: Red for overdue, Green for due today, colorless for due in the future</string>
+    <string name="assignmentListTutorial">"This is the assignment list screen. Here you can swipe at a single assignment to delete, or press the trash can to delete it as well. Press the plus at the bottom to go to the add screen. \n\n Assignments are color coded: Red for overdue, Green for due today, Blue for due tomorrow, colorless for due in the future</string>
     <string name="checkboxtutuorial">The checkbox on each assignment is the \'Mark As Done\' field where you can check off assignments you have completed</string>
     <string name="todyupTutorial">Press this icon once you are ready to tidy up your assignments. This will remove any completed assignments</string>
     <string name="helpButtonDesc">Help</string>
-    <string name="aboutTitle">About Us</string>
+    <string name="aboutTitle">About</string>
+    <string name="aboutTheApp">We created Micromanager as a result of the advent of online classes. Realising how important it was to keep on top of our assignments, we wanted to make an app to help students just like ourselves
+    keep organized. Below you can find information about the development team. </string>
     <string name="SafwaanName">Safwaan Taher</string>
     <string name="SafwaanRole">Project Lead</string>
     <string name="SafwaanDesc">As project lead Safwaan oversaw backend development, created and led UI design, implemented improvements to the project based on suggestions and planned out the project. \n\nYou can learn more about Safwaan here: </string>

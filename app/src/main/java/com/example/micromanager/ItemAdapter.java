@@ -1,8 +1,6 @@
 package com.example.micromanager;
 
-import android.app.Application;
-import android.content.ClipData;
-import android.content.Context;
+import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -10,23 +8,18 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.ImageView;
-import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.view.menu.MenuView;
-import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
-import java.util.concurrent.atomic.AtomicInteger;
 
 public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
 
@@ -47,6 +40,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
         return new ViewHolder(view);
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         //Fetching the database table at the current position from database list
@@ -78,11 +72,13 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
             //Turns the background and text red
             holder.itemView.setBackgroundColor(Color.parseColor("#8b0000"));
             holder.txtItemDate.setTextColor(Color.parseColor("#ff7a7a"));
-            /*
-            Insert code to change the current assignmentTable.isOverdue to true
-            and update the database
-             */
             Log.d("REACHED", "RED COLOR");
+        }else if(dueDateOfCurrentAssignment.equals(getTomorrowsDate())) {
+            //Turns the background a yellow color
+            holder.itemView.setBackgroundColor(Color.parseColor("#CC8400"));
+            holder.txtItemDate.setText("Due: Tomorrow");
+            holder.txtItemDate.setTextColor(Color.parseColor("#ff0000"));
+            Log.d("REACHED","BLUE COLOR");
         }else{
             //Reverts color adn background to original
             holder.itemView.setBackgroundColor(Color.parseColor("#191970"));
@@ -114,8 +110,16 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
         String myFormat = "MM/dd/yy";
         SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
         String currentDateAsString = sdf.format(calendar.getTime());
-        Date currentDate = parseDate(currentDateAsString);
-        return currentDate;
+        return parseDate(currentDateAsString);
+    }
+
+    public Date getTomorrowsDate(){
+        Calendar calendar = Calendar.getInstance();
+        String myFormat = "MM/dd/yy";
+        SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
+        calendar.add(Calendar.DAY_OF_MONTH, 1);
+        String tomorrowsDateAsString = sdf.format(calendar.getTime());
+        return parseDate(tomorrowsDateAsString);
     }
 
     public AssignmentTable getAssignmentTableAt(int position){

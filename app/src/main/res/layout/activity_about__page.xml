@@ -11,6 +11,20 @@
         android:layout_height="wrap_content"
         tools:context=".About_Page">
 
+        <TextView
+            android:id="@+id/AboutTheApp"
+            android:layout_width="346dp"
+            android:layout_height="169dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/aboutTheApp"
+            android:textAlignment="center"
+            android:textColor="@color/mainTextColor"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/backtohomeBar" />
+
+
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/safwaan_profile_image"
             android:layout_width="145dp"
@@ -22,7 +36,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/backtohomeBar"
+            app:layout_constraintTop_toBottomOf="@+id/AboutTheApp"
             app:layout_constraintVertical_bias="0.0" />
 
         <TextView
