@@ -9,18 +9,19 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
-        android:layout_width="410dp"
-        android:layout_height="516dp"
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.269" />
+        app:layout_constraintTop_toBottomOf="@+id/backtohomeBar"
+        android:layout_marginTop="2dp"
+        app:layout_constraintVertical_bias="0.0" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/backtohomeBar"
-        android:layout_width="411dp"
+        android:layout_width="match_parent"
         android:layout_height="53dp"
         android:background="#00323213"
         android:minHeight="?attr/actionBarSize"
@@ -36,20 +37,20 @@
         android:id="@+id/Add_Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/primaryButtonColor"
         android:clickable="true"
+        android:focusable="true"
+        android:layout_marginBottom="25dp"
         android:onClick="addAssignments"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/recyclerView"
-        app:layout_constraintVertical_bias="0.956"
+        app:layout_constraintVertical_bias="0.747"
         app:srcCompat="@drawable/ic_baseline_add_24" />
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="410dp"
+        android:layout_width="match_parent"
         android:layout_height="63dp"
         android:contentDescription="@string/optionsMenu"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -62,16 +63,16 @@
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="31dp"
-        android:layout_height="32dp"
+        android:layout_width="26dp"
+        android:layout_height="29dp"
         android:contentDescription="@string/helpButtonDesc"
+        android:layout_marginBottom="30dp"
         android:onClick="goToHelpScreen"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
-        app:layout_constraintEnd_toStartOf="@+id/Add_Button"
-        app:layout_constraintHorizontal_bias="0.253"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.96"
+        android:layout_marginStart="50dp"
+        app:layout_constraintVertical_bias="0.792"
         app:srcCompat="@drawable/ic_baseline_help_24" />
 
     <ImageView
@@ -82,10 +83,11 @@
         android:onClick="tidyUpAssignments"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.775"
-        app:layout_constraintStart_toEndOf="@+id/Add_Button"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.961"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginEnd="50dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintVertical_bias="0.797"
         app:srcCompat="@drawable/ic_baseline_check_circle_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

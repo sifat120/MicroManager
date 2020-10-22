@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Micromanager</string>
-    <string name="assignment_name_field">Name (Please shorten)</string>
+    <string name="assignment_name_field">Name</string>
     <string name="add_assignment">Add Assignments</string>
     <string name="back_to_home">Home</string>
     <string name="optionsMenu">&#8942;</string>
@@ -29,8 +29,8 @@
     <string name="todyupTutorial">Press this icon once you are ready to tidy up your assignments. This will remove any completed assignments</string>
     <string name="helpButtonDesc">Help</string>
     <string name="aboutTitle">About</string>
-    <string name="aboutTheApp">We created Micromanager as a result of the advent of online classes. Realising how important it was to keep on top of our assignments, we wanted to make an app to help students just like ourselves
-    keep organized. Below you can find information about the development team. </string>
+    <string name="aboutTheApp">We created Micromanager as a result of the advent of online classes. Realizing how important it was to keep on top of our assignments, we wanted to make an app to help students just like ourselves
+    keep organized. With this app students can keep track of all their assignments so they don\'t fall behind. Below you can find information about the team who put this app together. </string>
     <string name="SafwaanName">Safwaan Taher</string>
     <string name="SafwaanRole">Project Lead</string>
     <string name="SafwaanDesc">As project lead Safwaan oversaw backend development, created and led UI design, implemented improvements to the project based on suggestions and planned out the project. \n\nYou can learn more about Safwaan here: </string>
@@ -45,4 +45,5 @@
     <string name="SifatLink">https://www.linkedin.com/in/sifat-hasan-13387a187/</string>
     <string name="tidyUpIconDesc">Tidy Up</string>
     <string name="DeleteButtonDesc">Delete</string>
+    <string name="addbuttonassignmentlist">addbuttonassignmentlist</string>
 </resources>

@@ -27,8 +27,10 @@
 
         <TextView
             android:id="@+id/mainpageText"
-            android:layout_width="345dp"
-            android:layout_height="92dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
             android:layout_marginTop="20dp"
             android:text="@string/howtoUseDirections3"
             android:textColor="@color/mainTextColor"
@@ -40,8 +42,10 @@
 
         <TextView
             android:id="@+id/helpTitle"
-            android:layout_width="348dp"
-            android:layout_height="26dp"
+            android:layout_width="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="@string/howToUseTitle"
             android:textColor="@color/mainTextColor"
@@ -66,9 +70,12 @@
 
         <TextView
             android:id="@+id/addscreenText"
-            android:layout_width="345dp"
-            android:layout_height="106dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            app:layout_goneMarginEnd="20dp"
             android:text="@string/howToUseDirections2"
             android:textColor="@color/mainTextColor"
             android:textSize="18sp"
@@ -89,8 +96,10 @@
 
         <TextView
             android:id="@+id/assignmentListText"
-            android:layout_width="345dp"
-            android:layout_height="200dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="56dp"
             android:text="@string/assignmentListTutorial"
             android:textColor="@color/mainTextColor"
@@ -105,7 +114,6 @@
             android:layout_width="44dp"
             android:layout_height="41dp"
             android:layout_marginTop="20dp"
-            android:buttonTint="#FFFFFF"
             android:text=""
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
@@ -114,8 +122,10 @@
 
         <TextView
             android:id="@+id/checkboxText"
-            android:layout_width="321dp"
-            android:layout_height="106dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
             android:layout_marginTop="20dp"
             android:text="@string/checkboxtutuorial"
             android:textColor="@color/mainTextColor"
@@ -138,8 +148,10 @@
             app:srcCompat="@drawable/ic_baseline_check_circle_24" />
         <TextView
             android:id="@+id/tidyuptext"
-            android:layout_width="321dp"
-            android:layout_height="106dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
             android:text="@string/todyupTutorial"
             android:textColor="@color/mainTextColor"
