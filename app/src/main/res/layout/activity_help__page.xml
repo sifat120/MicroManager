@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@color/darkBlueBackground">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/darkBlueBackground"
+        tools:context=".Help_Page">
+
+
+        <ImageView
+            android:id="@+id/mainpage"
+            android:layout_width="207dp"
+            android:layout_height="262dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/mainpage"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/helpTitle" />
+
+        <TextView
+            android:id="@+id/mainpageText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/howtoUseDirections3"
+            android:textColor="@color/mainTextColor"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.488"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mainpage" />
+
+        <TextView
+            android:id="@+id/helpTitle"
+            android:layout_width="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/howToUseTitle"
+            android:textColor="@color/mainTextColor"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.488"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/backtohomeBar" />
+
+
+        <ImageView
+            android:id="@+id/addscreen"
+            android:layout_width="207dp"
+            android:layout_height="262dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/helppageadddscreen"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.483"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mainpageText" />
+
+        <TextView
+            android:id="@+id/addscreenText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            app:layout_goneMarginEnd="20dp"
+            android:text="@string/howToUseDirections2"
+            android:textColor="@color/mainTextColor"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addscreen" />
+
+        <ImageView
+            android:id="@+id/assignmentList"
+            android:layout_width="207dp"
+            android:layout_height="262dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/assignmentlistscreen"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/addscreenText" />
+
+
+        <TextView
+            android:id="@+id/assignmentListText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="56dp"
+            android:text="@string/assignmentListTutorial"
+            android:textColor="@color/mainTextColor"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.52"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/assignmentList" />
+
+        <CheckBox
+            android:id="@+id/markAsDoneBox"
+            android:layout_width="44dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="20dp"
+            android:text=""
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/assignmentListText" />
+
+        <TextView
+            android:id="@+id/checkboxText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/checkboxtutuorial"
+            android:textColor="@color/mainTextColor"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.488"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/markAsDoneBox" />
+
+
+        <ImageView
+            android:id="@+id/tidyupicon"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:contentDescription="@string/aboutTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkboxText"
+            app:srcCompat="@drawable/ic_baseline_check_circle_24" />
+        <TextView
+            android:id="@+id/tidyuptext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/todyupTutorial"
+            android:textColor="@color/mainTextColor"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.488"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tidyupicon" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/backtohomeBar"
+            android:layout_width="387dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="4dp"
+            android:background="#00FFFFF0"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/AppTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:subtitleTextColor="@color/mainTextColor"
+            app:title="Home"
+            app:titleTextColor="@color/mainTextColor" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

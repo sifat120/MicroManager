@@ -4,37 +4,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Add_Screen"
-    android:background="@drawable/background">
+    android:background="@color/blueofficial"
+    tools:context=".Add_Screen">
 
     <EditText
         android:id="@+id/Due_Date_Field"
-        android:layout_width="336dp"
-        android:layout_height="54dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="15dp"
+        android:autofillHints="@string/dueDateText"
         android:hint="@string/assignment_due_date_field"
-        android:clickable="true"
         android:inputType="date"
-        android:focusable="false"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/typeHint"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Name_Field"
         app:layout_constraintVertical_bias="0.336" />
 
     <EditText
         android:id="@+id/Name_Field"
-        android:layout_width="336dp"
-        android:layout_height="54dp"
+        android:layout_width="match_parent"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="15dp"
+        android:maxLength="15"
         android:drawableBottom="@android:color/background_dark"
         android:hint="@string/assignment_name_field"
         app:layout_constraintBottom_toTopOf="@+id/Due_Date_Field"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backtohomeBar"
+        android:layout_marginTop="80dp"
         app:layout_constraintVertical_bias="0.809"
-        />
+        android:autofillHints="@string/nameText"
+        android:inputType="text" />
 
     <Button
         android:id="@+id/Add_Button"
@@ -47,23 +56,24 @@
         android:text="@string/add_button"
         android:textColor="@color/mainTextColor"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="100dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/backtohomeBar"
+        app:layout_constraintTop_toBottomOf="@+id/Type_Field"
         app:layout_constraintVertical_bias="1.0" />
 
     <Spinner
         android:id="@+id/Type_Field"
-        android:layout_width="334dp"
-        android:layout_height="44dp"
-        app:layout_constraintBottom_toTopOf="@+id/Add_Button"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="30dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Due_Date_Field"
-        app:layout_constraintVertical_bias="0.424" />
+        app:layout_constraintTop_toBottomOf="@+id/typeHint" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/backtohomeBar"
@@ -82,27 +92,31 @@
 
     <TextView
         android:id="@+id/typeHint"
-        android:layout_width="338dp"
-        android:layout_height="32dp"
+        android:layout_width="match_parent"
+        android:layout_marginEnd="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="30dp"
         android:text="@string/assignment_type_field"
-        android:textSize="18dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/Type_Field"
+        android:layout_marginTop="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.534"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/backtohomeBar"
-        app:layout_constraintVertical_bias="0.379" />
+        app:layout_constraintTop_toBottomOf="@+id/Due_Date_Field"
+        app:layout_constraintVertical_bias="0.377" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/calenderIcon"
         android:layout_width="134dp"
         android:layout_height="130dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:onClick="goToAssignmentListScreen"
+        android:layout_marginTop="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Add_Button"
         app:srcCompat="@drawable/calender"
-        android:onClick="goToAssignmentListScreen"/>
+        android:contentDescription="@string/dueDateText"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

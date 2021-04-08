@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@color/darkBlueBackground">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".About_Page">
+
+        <TextView
+            android:id="@+id/AboutTheApp"
+            android:layout_width="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_height="221dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/aboutTheApp"
+            android:textAlignment="center"
+            android:textColor="@color/mainTextColor"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/backtohomeBar" />
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/safwaan_profile_image"
+            android:layout_width="145dp"
+            android:layout_height="154dp"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/profilephotocropped"
+            app:civ_border_color="#00000000"
+            app:civ_border_width="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/AboutTheApp"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/SafwaanName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/SafwaanName"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/safwaan_profile_image" />
+        <TextView
+            android:id="@+id/SafwaanRole"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/SafwaanRole"
+            android:textAlignment="center"
+            android:textColor="@color/mainTextColor"
+            android:textStyle="italic"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/SafwaanName"/>
+
+        <TextView
+            android:id="@+id/SafwaanDesc"
+            android:layout_width="match_parent"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/SafwaanDesc"
+            android:textAlignment="center"
+            android:textColor="@color/mainTextColor"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/SafwaanRole" />
+
+        <TextView
+            android:id="@+id/SafwaanLink"
+            android:autoLink="all"
+            android:clickable="true"
+            android:layout_width="281dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="2dp"
+            android:text="@string/SafwaanLink"
+            android:textAlignment="center"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/SafwaanDesc"
+            android:focusable="true" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/backtohomeBar"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:background="#00323213"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/AppTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:subtitleTextColor="@color/mainTextColor"
+            app:title="@string/aboutTitle"
+            app:titleTextColor="@color/mainTextColor" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/Humza_profile_photo"
+            android:layout_width="145dp"
+            android:layout_height="154dp"
+            android:layout_marginTop="100dp"
+            android:src="@drawable/humzapfp"
+            app:civ_border_color="#00000000"
+            app:civ_border_width="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/SafwaanLink"
+            app:layout_constraintVertical_bias="0.0" />
+        <TextView
+            android:id="@+id/HumzaName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/HumzaName"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Humza_profile_photo" />
+        <TextView
+            android:id="@+id/HumzaRole"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/HumzaRole"
+            android:textAlignment="center"
+            android:textColor="@color/mainTextColor"
+            android:textStyle="italic"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/HumzaName"/>
+
+        <TextView
+            android:id="@+id/HumzaDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="@string/HumzaDesc"
+            android:textAlignment="center"
+            android:textColor="@color/mainTextColor"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/HumzaRole" />
+
+        <TextView
+            android:id="@+id/HumzaLink"
+            android:autoLink="all"
+            android:clickable="true"
+            android:layout_width="281dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="2dp"
+            android:text="@string/HumzaLink"
+            android:textAlignment="center"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/HumzaDesc"
+            android:focusable="true" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/Sifat_Profile_Photo"
+            android:layout_width="145dp"
+            android:layout_height="154dp"
+            android:layout_marginTop="100dp"
+            android:src="@drawable/sifatphoto"
+            app:civ_border_color="#00000000"
+            app:civ_border_width="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/HumzaLink"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/SifatName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/SifatName"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Sifat_Profile_Photo" />
+
+        <TextView
+            android:id="@+id/SifatRole"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/SifatRole"
+            android:textAlignment="center"
+            android:textColor="@color/mainTextColor"
+            android:textStyle="italic"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/SifatName"/>
+
+        <TextView
+            android:id="@+id/SifatDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:text="@string/SifatDesc"
+            android:textAlignment="center"
+            android:textColor="@color/mainTextColor"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/SifatRole" />
+
+        <TextView
+            android:id="@+id/SifatLink"
+            android:autoLink="all"
+            android:clickable="true"
+            android:layout_width="281dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/SifatLink"
+            android:textAlignment="center"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/SifatDesc"
+            android:focusable="true" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

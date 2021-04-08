@@ -4,9 +4,19 @@
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
     <color name="blueofficial">#60B0F4</color>
+    <color name="darkYellow">#CC8400</color>
+    <color name="gray">#9CA098</color>
+    <color name="lightGray">#B9BCB6</color>
     <color name="red">#ff0000</color>
-    <color name="primaryButtonColor">#45b1e8</color>
+    <color name="primaryButtonColor">#C83200</color>
+    <color name="mediumOrange">#F3873E</color>
     <color name="mainTextColor">#ffbd42</color>
+    <color name="darkBlueBackground">#191970</color>
+    <color name = "brightRed">#ff7a7a</color>
     <color name="green">#28d900</color>
     <color name="white">#FFFFFF</color>
+    <color name="darkRed">#8b0000</color>
+    <color name="darkGreen">#228b22</color>
+    <color name="black">#000000</color>
+    <color name="bottomtaskbarcolor">#0038a8</color>
 </resources>
